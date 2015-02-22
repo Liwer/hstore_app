@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Dir[Rails.root.join('db/seeds/*.rb')].sort.each do |f|
+
+  require f
+
+end
