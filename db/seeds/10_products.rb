@@ -2,7 +2,7 @@
 Product.destroy_all
 
 
-Product.create(name: "Мед натуральний, кітковий, лісовий",     
+Product.create(name: "Мед натуральний, квітковий, лісовий",     
   options:[{
   price: "30",
   volume: "0.5 л",
@@ -129,40 +129,40 @@ packing: "Поліетиленова упаковка"}
 Product.create(name: "Настойка прополіса 10%",
 options:[{
 price: "30 грн",
-volume: "50 л",
+volume: "50 мл",
 packing: "Скло"},
 {
 price: "60 грн",
-volume: "100 г",
+volume: "100 мл",
 packing: "Скло"},
 ])
 
 Product.create(name: "Екстракт воскової молі 20%",
 options:[{
 price: "50 грн",
-volume: "50 г",
+volume: "50 мл",
 packing: "Скло"},
 {
 price: "100 грн",
-volume: "100 г",
+volume: "100 мл",
 packing: "Скло"}
 ])
 
 Product.create(name: "Екстракт прополіса 30%",
 options:[{
 price: "50 грн",
-mass: "50 г",
+mass: "50 мл",
 packing: "Скло"}
 ])
 
 Product.create(name: "Настойка бджолиного подмору",
 options:[{
 price: "30 грн",
-mass: "50 г",
+mass: "50 мл",
 packing: "Скло"},
 {
 price: "60 грн",
-mass: "100 г",
+mass: "100 мл",
 packing: "Скло"}
 ])
 
@@ -191,7 +191,7 @@ mass: "750 г",
 packing: "Скло"}
 ])
 
-Product.create(name: "Маточники косервовані в меду",
+Product.create(name: "Маточники консервовані в медові",
 options:[{
 price: "200 грн",
 amount: "10 шт",
@@ -273,7 +273,7 @@ volume: "30 мл",
 packing: "Скло"}
 ])
 
-Product.create(name: "Крем для массажу",
+Product.create(name: "Крем для масажу",
 options:[{
 price: "40 грн",
 volume: "100 мл",
