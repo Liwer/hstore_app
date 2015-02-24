@@ -9,10 +9,11 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
+    params[:order][:count] = 1 if params[:order][:count] == ""
     if session[:cart].nil?
       session[:cart] = []
     end
-    session[:cart] << {product_id: params[:product_id], option: params[:option]}
+    session[:cart] << {product_id: params[:order][:product_id], option: params[:order][:option], count: params[:order][:count]}
     redirect_to :back
   end
 

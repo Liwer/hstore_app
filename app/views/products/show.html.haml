@@ -5,6 +5,10 @@
   = o[:mass]
   = o[:packing]
   %br
-  = link_to "Add to cart", cart_path(product_id: @product.id, option: i)
+  = simple_form_for :order, { url: '/products/add_to_cart' } do |f|
+    = f.input :count, as: :integer, input_html: { value: 1 }
+    = f.input :product_id, as: :hidden, input_html: { value: @product.id }
+    = f.input :option, as: :hidden, input_html: { value: i }
+    = f.submit
   %br
   %br
