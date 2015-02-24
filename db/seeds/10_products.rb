@@ -4,12 +4,12 @@ Product.destroy_all
 
 Product.create(name: "Мед натуральний, квітковий, лісовий",     
                options:[{
-  price: "30",
+  price: "30 грн",
   volume: "0.5 л",
   mass: "700 г",
   packing: "Скло або пластик"}, 
   {
-  price: "60",
+  price: "60 грн",
   volume: "1 л",
   mass: "1400 г",
   packing: "Скло або пластик"}
