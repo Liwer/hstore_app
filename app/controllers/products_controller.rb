@@ -12,6 +12,6 @@ class ProductsController < ApplicationController
     #  session[:cart] = []
     #end
     #session[:cart]<<{product_id: params[:product_id], 
-    count: params[:count], options: params[:options]}
+#    count: params[:count], options: params[:options]}
   end
 end
