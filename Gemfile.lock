@@ -96,6 +96,9 @@ GEM
       moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+    mongoid_slug (4.0.0)
+      mongoid (>= 3.0)
+      stringex (~> 2.0)
     moped (2.0.4)
       bson (~> 2.2)
       connection_pool (~> 2.0)
@@ -160,6 +163,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    stringex (2.5.2)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -189,6 +193,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (= 4.0.0)
+  mongoid_slug
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
