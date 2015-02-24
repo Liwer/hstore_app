@@ -1,0 +1,10 @@
+= @product.try(:name)
+%br
+- @product.options.each_with_index do |o, i|
+  = o[:price]
+  = o[:mass]
+  = o[:packing]
+  %br
+  = link_to "Add to cart", cart_path(product_id: @product.id, option: i)
+  %br
+  %br

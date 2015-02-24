@@ -1,0 +1,11 @@
+- @products.each do |p|
+  = link_to p.try(:name), show_path(p)
+  %br
+  - p.options.each do |o|
+    = o[:price]
+    = o[:volume]
+    = o[:mass]
+    %br
+
+  %br
+  %br
