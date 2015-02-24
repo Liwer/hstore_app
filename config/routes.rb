@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'products#index'
-  get 'products/add_to_cart' => 'products#add_to_cart', as: 'cart'
+  post 'products/add_to_cart' => 'products#add_to_cart', as: 'cart'
   get 'products/clear_cart' => 'products#clear_cart', as: 'clear_cart'
   get 'products/:id' => 'products#show', as: 'show'
 
