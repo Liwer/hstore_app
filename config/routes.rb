@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'products#index'
+  root 'products#index', as: 'index'
   post 'products/add_to_cart' => 'products#add_to_cart', as: 'cart'
   get 'products/clear_cart' => 'products#clear_cart', as: 'clear_cart'
+  get 'products/remove_from_cart' => 'products#remove_from_cart', as: 'rm_from_cart'
   get 'products/:id' => 'products#show', as: 'show'
+  get 'orders/cart'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

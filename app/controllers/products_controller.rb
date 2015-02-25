@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
     @products = Product.all.to_a
   end
@@ -13,7 +14,8 @@ class ProductsController < ApplicationController
     if session[:cart].nil?
       session[:cart] = []
     end
-    session[:cart] << {product_id: params[:order][:product_id], option: params[:order][:option], count: params[:order][:count]}
+    session[:cart] << {product_id: params[:order][:product_id], option: params[:order][:option], 
+                       count: params[:order][:count]}
     redirect_to :back
   end
 
@@ -23,5 +25,9 @@ class ProductsController < ApplicationController
   end
 
   def remove_from_cart
+    session[:cart].each do |d|
+      d = []
+    end
+    redirect_to :back
   end
 end

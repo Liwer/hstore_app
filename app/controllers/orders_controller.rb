@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
-  def show
-
+  def cart
+    @orders = session[:cart]
+    @orders.each do |r, i|
+    
+    end
   end
 
 end
