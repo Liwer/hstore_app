@@ -1,14 +1,17 @@
 = @product.try(:name)
 %br
 - @product.options.each_with_index do |o, i|
+  %strong
+    = "Option ##{i}"
+  %br
   = o[:price]
   = o[:mass]
   = o[:packing]
   %br
-  = simple_form_for :order, { url: '/products/add_to_cart' } do |f|
+  = simple_form_for :order, { url: '/add_to_cart' } do |f|
     = f.input :count, as: :integer, input_html: { value: 1 }
     = f.input :product_id, as: :hidden, input_html: { value: @product.id }
-    = f.input :option, as: :hidden, input_html: { value: i }
+    = f.input :option_id, as: :hidden, input_html: { value: i }
     = f.submit
   %br
   %br
