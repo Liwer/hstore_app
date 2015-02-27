@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
 
   def clear_cart
     session.delete(:cart)
-    redirect_to :back
+    redirect_to root_path
   end
 
   def remove_from_cart
