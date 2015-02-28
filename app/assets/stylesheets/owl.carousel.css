@@ -1,0 +1,75 @@
+#owl {
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+	top: -6px;
+	color: #fff;
+	padding: 0px 0px 0px;
+}
+
+#owl a:hover {
+	color: #ff8787;
+}
+
+#owl .owl-item {
+	float: left;
+	width: 100%;
+}
+
+#owl .item {
+	position: relative;
+	text-align: left;
+}
+
+
+.owl-wrapper-outer {
+	overflow: hidden;
+	padding-top: 0px;
+}
+
+.owl-wrapper {
+	overflow: hidden;
+}
+
+.owl-pagination {
+	position: absolute;
+	bottom: 28px;
+	left: 1px;
+}
+
+.owl-pagination span {
+	display: block;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	background: url(/assets/pagination.png) right 0 no-repeat;
+	margin-right: 8px;
+}
+
+.owl-pagination .active span {
+	background-position: 0 0;
+}
+
+.owl-pagination span:hover {
+	background-position: 0 0;
+}
+
+.owl-page   {
+	float: left;
+}
+
+.owl-page+.owl-page {
+	/*margin-left: 4px;*/
+}
+
+
+/* Owl content */
+
+
+
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-webkit-perspective: 1000;
+}

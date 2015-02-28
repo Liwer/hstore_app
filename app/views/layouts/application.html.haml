@@ -6,18 +6,175 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    - flash.each do |name, msg|
-      = content_tag :div, msg.html_safe#, id: "flash_#{name}", class: "alert alert-#{name}"
-    %br
-    = session[:cart]
-    %br
-    %br
-    = link_to "Clear cart", clear_cart_path
-    = link_to "remove", rm_from_cart_path
-    %br
-    = link_to "My cart", cart_path
-    %br
-    %br
-    %br  
-    %hr
-    = yield
+    // - flash.each do |name, msg|
+    //   = content_tag :div, msg.html_safe#, id: "flash_#{name}", class: "alert alert-#{name}"
+    // %br
+    // = session[:cart]
+    // %br
+    // %br
+    // = link_to "Clear cart", clear_cart_path
+    // = link_to "remove", rm_from_cart_path
+    // %br
+    // = link_to "My cart", cart_path
+    // %br
+    // %br
+    // %br  
+    // %hr
+    // = yield
+
+
+    / button back top
+    #back-top TOP
+    %header
+      .container_12
+        .grid_12.txt_cntr
+          .white_bg
+            %h1
+              %a{:href => "index.html"}
+                %img{:alt => "Honey", :src => "/assets/logo.png"}/
+            %nav
+              %ul.sf-menu.sf-js-enabled
+                %li.current
+                  %a{:href => "index.html"}
+                    Home
+                    %strong
+                %li
+                  %a{:href => "index-1.html"}
+                    About Us
+                    %strong
+                %li
+                  %a.sf-with-ul{:href => "index-2.html"}
+                    %span>
+                    Honey Products
+                    %strong
+                    %span.sf-sub-indicator
+                  %ul.submenu{:style => "display: none; visibility: hidden;"}
+                    %li
+                      %a{:href => "#"} Lorem
+                    %li.sub-menu
+                      %a.sf-with-ul{:href => "#"}
+                        Drtyop
+                        %span.sf-sub-indicator
+                      %ul.submenu2{:style => "display: none; visibility: hidden;"}
+                        %li
+                          %a{:href => "#"} Latest
+                        %li
+                          %a{:href => "#"} Archive
+                %li
+                  %a{:href => "index-3.html"}
+                    Gallery
+                    %strong
+                %li
+                  %a{:href => "index-4.html"}
+                    Ordering
+                    %strong
+                %li#last-li
+                  %a{:href => "index-5.html"}
+                    Contacts
+                    %strong
+    .main
+      .div-content
+        = yield
+
+        .box-2
+          .container_12
+            .grid_12
+              .grid_4.alpha
+                #owl.owl-carousel.owl-theme{:style => "opacity: 1; display: block;"}
+                  .owl-wrapper-outer
+                    .owl-wrapper{:style => "width: 1200px; left: 0px; display: block;"}
+                      .owl-item{:style => "width: 300px;"}
+                        .item
+                          %blockquote
+                            %p “Xam liber tempor cum so luta nob is eleifend option congue nihil imperdiet doming id quod mazim pla cerat facer possim  nihil imperdiet doming id qu”
+                          %p.bq_txt1 Amanda Smith
+                          %p.bq_txt2 Office Manager, USA
+                      .owl-item{:style => "width: 300px;"}
+                        .item
+                          %blockquote
+                            %p “congue nihil imperdiet doming id am liber tempor cum so luta nob is eleifend option quod mazim pla cerat facer possim  nihil imperdiet doming id qu”
+                          %p.bq_txt1 Jessy Smith
+                          %p.bq_txt2 Office Manager, USA
+                  .owl-controls.clickable
+                    .owl-pagination
+                      .owl-page.active
+                        %span
+                      .owl-page
+                        %span
+              .grid_8.omega
+                %p.title_order Ordering
+                .wrapper.marTop2
+                  %p.num_txt 1.
+                  .box2
+                    %p.color1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
+                .wrapper.marTop3
+                  %p.num_txt 2.
+                  .box2
+                    %p.color1 Sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imper.
+
+
+
+        / =======footer=================================
+        %footer
+          .container_12
+            .grid_12
+              .main-footer
+                %h1
+                  %a{:href => "index.html"}
+                    %img{:alt => "Honey", :src => "/assets/logo_footer.png"}/
+                %p.priv_txt
+                  ©
+                  %span#copyright-year 2015
+                  |
+                  %a{:href => "index-6.html"} Privacy policy
+                  %br/
+                  / {%FOOTER_LINK}
+                .clear
+    :javascript
+      $(document).ready(function(){
+      
+                          jQuery('#camera_wrap').camera({
+                                  loader: false,
+                                  pagination: true,
+                                  thumbnails: false,
+                                  height: '43.624494142%',
+                                  fx: 'curtainSliceRight',
+                                  rows: '1',
+                                  slicedCols: '5',
+                                  slicedRows: '1',
+                                  caption: false
+                          });
+      
+           });
+                  
+                  
+                  $(document).ready(function(){
+                          // Initialize the gallery
+                          $('.magnifier2').touchTouch();
+                  });
+      
+                  function myFocus(element){
+                 if (element.value == element.defaultValue){
+                     element.focus();
+                     element.value = '';
+                 }
+              }
+              function myBlur(element){
+                 if (element.value == ''){
+                     element.blur();
+                     element.value = element.defaultValue;
+                 }
+              }
+    :javascript
+      var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-7078796-5']);
+       _gaq.push(['_trackPageview']);
+       (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+    #galleryOverlay{:style => "display: none;"}
+      #gallerySlider
+      %a#prevArrow
+      %a#nextArrow
