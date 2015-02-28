@@ -46,9 +46,13 @@ class ProductsController < ApplicationController
   end
 
   def remove_from_cart
-    session[:cart].each do |d|
-      d = []
-    end
+
+    session[:cart].slice!(params['product_id'].to_i) if session[:cart][params['product_id'].to_i]
+    if session[:cart].empty?
+      session.delete(:cart)
+      redirect_to root_path
+    else
     redirect_to :back
+    end
   end
 end

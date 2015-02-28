@@ -1,8 +1,18 @@
-- @order.each do |p|
+- @order.each_with_index do |p, i|
+  = link_to "Remove", rm_from_cart_path(product_id: i)
   = p['name']
+  %strong
+    = i
   %br
   - p['options'].each do |o|
     - o.each do |k,v|
       = "#{k}: #{v}"
       %br
+  %br
+
+- session[:cart].each_with_index do |c, i|
+  = c
+  %br
+  = i
+  %br
   %br
