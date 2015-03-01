@@ -8,6 +8,7 @@
     - o.each do |k,v|
       = "#{k}: #{v}"
       %br
+      = link_to "rmOption", rm_from_cart_path
   %br
 
 - session[:cart].each_with_index do |c, i|
@@ -16,3 +17,10 @@
   = i
   %br
   %br
+
+
+
+  
+
+
+
