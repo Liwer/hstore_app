@@ -2,7 +2,9 @@
 Product.destroy_all
 
 
-Product.create(name: "Мед натуральний, квітковий, лісовий",     
+Product.create(name: "Мед натуральний, квітковий, лісовий",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "0.5 л",
@@ -16,6 +18,8 @@ Product.create(name: "Мед натуральний, квітковий, ліс�
 ])
 
 Product.create(name: "Мед натуральний, акацієвий, липовий, гречаний",
+               active: true,
+               main: false,
                options:[{
   price: "40",
   volume: "0.5 л",
@@ -29,6 +33,8 @@ Product.create(name: "Мед натуральний, акацієвий, лип�
 ])
 
 Product.create(name: "Мед натуральний, рапсовий, соняшниковий",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "0.5 л",
@@ -42,6 +48,8 @@ Product.create(name: "Мед натуральний, рапсовий, соня�
 ])
 
 Product.create(name: "Мед щільниковий",
+               active: true,
+               main: false,
                options:[{
   price: "8.00",
   mass: "100 г",
@@ -49,12 +57,16 @@ Product.create(name: "Мед щільниковий",
 ])
 
 Product.create(name: "Мед щільниковий в дерев'яній рамці",
+               active: true,
+               main: false,
                options:[{
   prise: "70",
   mass: "1.3 кг"}
 ])
 
 Product.create(name: "Забрус",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "0.5 л",
@@ -63,6 +75,8 @@ Product.create(name: "Забрус",
 ])
 
 Product.create(name: "Пилок квітковий",
+               active: true,
+               main: false,
                options:[{
   price: "15",
   mass: "100 г",
@@ -74,6 +88,8 @@ Product.create(name: "Пилок квітковий",
 ])
 
 Product.create(name: "Перга очищена",
+               active: true,
+               main: false,
                options:[{
   price: "100",
   mass: "100 г",
@@ -85,6 +101,8 @@ Product.create(name: "Перга очищена",
 ])
 
 Product.create(name: "Віск забрусовий",
+               active: true,
+               main: false,
                options:[{
   price: "8",
   mass: "50 г",
@@ -100,6 +118,8 @@ Product.create(name: "Віск забрусовий",
 ])
 
 Product.create(name: "Прополіс",
+               active: true,
+               main: false,
                options:[{
   price: "10",
   mass: "10 г",
@@ -111,6 +131,8 @@ Product.create(name: "Прополіс",
 ])
 
 Product.create(name: "Підмор бджолинний",
+               active: true,
+               main: false,
                options:[{
   price: "50",
   volume: "0.5 л",
@@ -127,6 +149,8 @@ Product.create(name: "Підмор бджолинний",
 ])
 
 Product.create(name: "Настойка прополіса 10%",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "50 мл",
@@ -138,6 +162,8 @@ Product.create(name: "Настойка прополіса 10%",
 ])
 
 Product.create(name: "Екстракт воскової молі 20%",
+               active: true,
+               main: false,
                options:[{
   price: "50",
   volume: "50 мл",
@@ -149,6 +175,8 @@ Product.create(name: "Екстракт воскової молі 20%",
 ])
 
 Product.create(name: "Екстракт прополіса 30%",
+               active: true,
+               main: false,
                options:[{
   price: "50",
   mass: "50 мл",
@@ -156,6 +184,8 @@ Product.create(name: "Екстракт прополіса 30%",
 ])
 
 Product.create(name: "Настойка бджолиного подмору",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   mass: "50 мл",
@@ -167,6 +197,8 @@ Product.create(name: "Настойка бджолиного подмору",
 ])
 
 Product.create(name: "Екстракт трутневих личинок",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "50 мл",
@@ -178,6 +210,8 @@ Product.create(name: "Екстракт трутневих личинок",
 ])
 
 Product.create(name: "Маточне молочко, нативне",
+               active: true,
+               main: false,
                options:[{
   price: "300",
   mass: "15 г",
@@ -185,6 +219,8 @@ Product.create(name: "Маточне молочко, нативне",
 ])
 
 Product.create(name: "Маточне молочко 15г, з медом 700г",
+               active: true,
+               main: false,
                options:[{
   price: "350",
   mass: "750 г",
@@ -192,6 +228,8 @@ Product.create(name: "Маточне молочко 15г, з медом 700г",
 ])
 
 Product.create(name: "Маточники консервовані в медові",
+               active: true,
+               main: false,
                options:[{
   price: "200",
   amount: "10 шт",
@@ -199,6 +237,8 @@ Product.create(name: "Маточники консервовані в медов�
 ])
 
 Product.create(name: "Трутневе молочко",
+               active: true,
+               main: false,
                options:[{
   price: "50",
   mass: "100 г",
@@ -210,6 +250,8 @@ Product.create(name: "Трутневе молочко",
 ])
 
 Product.create(name: "Трутневе молочко(100г) з медом(600г)",
+               active: true,
+               main: false,
                options:[{
   price: "100",
   mass: "700 г",
@@ -217,6 +259,8 @@ Product.create(name: "Трутневе молочко(100г) з медом(600г
 ])
 
 Product.create(name: "Чудо-мазь на основі воску",
+               active: true,
+               main: false,
                options:[{
   price: "15",
   volume: "30 мл",
@@ -228,6 +272,8 @@ Product.create(name: "Чудо-мазь на основі воску",
 ])
 
 Product.create(name: "Чудо мазь прополісна 10%",
+               active: true,
+               main: false,
                options:[{
   price: "15",
   volume: "30 мл",
@@ -239,6 +285,8 @@ Product.create(name: "Чудо мазь прополісна 10%",
 ])
 
 Product.create(name: "Чудо мазь прополісна 30%",
+               active: true,
+               main: false,
                options:[{
   price: "20",
   volume: "15 мл",
@@ -246,6 +294,8 @@ Product.create(name: "Чудо мазь прополісна 30%",
 ])
 
 Product.create(name: "Мазь з возковою молю 10%",
+               active: true,
+               main: false,
                options:[{
   price: "40",
   volume: "30 мл",
@@ -253,6 +303,8 @@ Product.create(name: "Мазь з возковою молю 10%",
 ])
 
 Product.create(name: "Мазь з подмором бджолиним 10%",
+               active: true,
+               main: false,
                options:[{
   price: "15",
   volume: "30 мл",
@@ -260,6 +312,8 @@ Product.create(name: "Мазь з подмором бджолиним 10%",
 ])
 
 Product.create(name: "Крем для лиця з маточним молочком",
+               active: true,
+               main: false,
                options:[{
   price: "30",
   volume: "30 мл",
@@ -267,6 +321,8 @@ Product.create(name: "Крем для лиця з маточним молочк�
 ])
 
 Product.create(name: "Крем для рук",
+               active: true,
+               main: false,
                options:[{
   price: "15",
   volume: "30 мл",
@@ -274,6 +330,8 @@ Product.create(name: "Крем для рук",
 ])
 
 Product.create(name: "Крем для масажу",
+               active: true,
+               main: false,
                options:[{
   price: "40",
   volume: "100 мл",
@@ -282,6 +340,8 @@ Product.create(name: "Крем для масажу",
 
 
 Product.create(name: "Медовуха",
+               active: true,
+               main: false,
                options:[{
   price: "40",
   volume: "0.5 мл",
@@ -295,6 +355,8 @@ Product.create(name: "Медовуха",
 ])
 
 Product.create(name: "Бальзам",
+               active: true,
+               main: false,
                options:[{
   price: "80",
   volume: "0.5 мл",
@@ -308,6 +370,8 @@ Product.create(name: "Бальзам",
 ])
 
 Product.create(name: "Мед з пилком",
+               active: true,
+               main: false,
                options:[{
   price: "45",
   volume: "0.5 л",
@@ -316,6 +380,8 @@ Product.create(name: "Мед з пилком",
 ])
 
 Product.create(name: "Мед з прополісом 10%",
+               active: true,
+               main: false,
                options:[{
   price: "100",
   volume: "0.5 л",
@@ -324,6 +390,8 @@ Product.create(name: "Мед з прополісом 10%",
 ])
 
 Product.create(name: "Мед з маточним молочком та гомогенатом трутневих личинок",
+               active: true,
+               main: false,
                options:[{
   price: "100",
   volume: "0.5 л",
@@ -333,6 +401,8 @@ Product.create(name: "Мед з маточним молочком та гомо�
 
 
 Product.create(name: "Мед з пилком, пергою, прополісом",
+               active: true,
+               main: false,
                options:[{
   price: "100",
   volume: "0.5 л",
@@ -341,6 +411,8 @@ Product.create(name: "Мед з пилком, пергою, прополісом
 ])
 
 Product.create(name: "Мед з горіхами і сухофруктами",
+               active: true,
+               main: false,
                options:[{
   prise: "60",
   volume: "0.5 л",
@@ -349,6 +421,8 @@ Product.create(name: "Мед з горіхами і сухофруктами",
 ])
 
 Product.create(name: "Мед з горіхами",
+               active: true,
+               main: false,
                options:[{
   price: "60",
   volume: "0.5 л",
@@ -357,41 +431,57 @@ Product.create(name: "Мед з горіхами",
 ])
 
 Product.create(name: "Вулик лежак на 24 рамки",
+               active: true,
+               main: false,
                options:[{
   price: "800"
 }])
 
 Product.create(name: "Вулик український на 24 рамки",
+               active: true,
+               main: false,
                options:[{
   price: "800"
 }])
 
 Product.create(name: "Вулик корпусний на 30 рамок",
+               active: true,
+               main: false,
                options:[{
   price: "800"
 }])
 
 Product.create(name: "Вулик альпійський на 48 рамок",
+               active: true,
+               main: false,
                options:[{
   price: "800"
 }])
 
 Product.create(name: "Рамка",
+               active: true,
+               main: false,
                options:[{
   price: "6"
 }])
 
 Product.create(name: "Кормушка дерев'яна на 4 літра",
+               active: true,
+               main: false,
                options: [{
   price: "50"
 }])
 
 Product.create(name: "Кормушка пластмасова надрамочна на 1.8 літра",
+               active: true,
+               main: false,
                options:[{
   price: "45"
 }])
 
 Product.create(name: "Ящики переносні на 6 рамок",
+               active: true,
+               main: false,
                options:[{
   price: "120"
 }])
