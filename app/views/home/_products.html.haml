@@ -1,0 +1,36 @@
+.container_12
+  .grid_12
+    .wrapper
+      %h2
+        %img.img2.no_resize{:alt => "", :src => "/assets/cell_sign.png"}/
+        Products
+        - div_class = Proc.new do |i|
+          - if i == 0
+            - 'alpha'
+          - elsif i == 3
+            - 'omega'
+          - else
+            - ''
+      - @products.each_with_index do |products, i|
+        .grid_3{class: "#{div_class.call(i)}"}
+          - products.each_with_index do |product, ii|
+            - if ii == 0
+              .wrapp.maxheight{:style => "height: 247px;"}
+                .box_inner
+                  = link_to show_path(product), class: 'img_project' do
+                    %img{:alt => "", :src => "/assets/page1_pic1.jpg"}/
+                    %span.price_sign
+                      = price(product)
+                  %h3
+                    = link_to product.name, "#"
+                  %p Nam liber teor cum soluta nob is
+            - else
+              .wrapper.marTop1
+                = link_to show_path(product), class: 'img_project' do
+                  %img{:alt => "", :src => "/assets/page1_pic2.jpg"}/
+                  %span.price_sign
+                    = price(product)
+                %h3
+                  %a
+                    = link_to product.name, "#"
+                %p Xam li tempor cum soluta nob is
