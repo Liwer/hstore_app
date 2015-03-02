@@ -4,20 +4,20 @@
   %strong
     = i
   %br
-  - p['options'].each do |o|
+  - p['options'].each_with_index do |o, ii|
     - o.each do |k,v|
       = "#{k}: #{v}"
       %br
-      = link_to "rmOption", rm_from_cart_path
+    %br
+    = link_to "rmOption", rm_option_path(product_id: i, opiton_id: ii)
   %br
-
 - session[:cart].each_with_index do |c, i|
   = c
   %br
   = i
   %br
   %br
-
+  
 
 
   

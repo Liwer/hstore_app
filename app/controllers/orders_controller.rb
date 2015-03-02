@@ -35,4 +35,16 @@ class OrdersController < ApplicationController
       end
     end
   end
+  def remove_option
+    if session[:cart][params['product_id'].to_i]
+    if session[:cart][params['product_id'].to_i]['options'][params['option_id'].to_i]
+    session[:cart][params['product_id'].to_i]['options'].slice!(params['option_id'].to_i)
+    end
+    end
+    if session[:cart][params['prodct_id'].to_i]['options'].empty?
+      redirect_to root_path
+    else
+    redirect_to :back
+    end
+  end
 end

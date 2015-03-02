@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # abort session[:cart].inspect
   end
 
   def add_to_cart

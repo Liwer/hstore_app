@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   post 'add_to_cart' => 'products#add_to_cart', as: 'add_to_cart'
   get 'products/clear_cart' => 'products#clear_cart', as: 'clear_cart'
   get 'products/remove_from_cart' => 'products#remove_from_cart', as: 'rm_from_cart'
-  get 'products/:id' => 'products#show', as: 'show'
   get 'cart' => 'orders#cart', as: 'cart'
-
+  get 'remove_option' => 'orders#remove_option', as: 'rm_option'
+  get 'products/:id' => 'products#show', as: 'show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
