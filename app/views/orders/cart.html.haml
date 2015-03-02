@@ -1,5 +1,7 @@
 - @order.each_with_index do |p, i|
-  = link_to "Remove", rm_from_cart_path(product_id: i)
+  %strong
+    = link_to "Remove product", rm_product_path(product_id: i)
+  %br
   = p['name']
   %strong
     = i
@@ -8,9 +10,11 @@
     - o.each do |k,v|
       = "#{k}: #{v}"
       %br
+    %strong
+      = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
     %br
-    = link_to "rmOption", rm_option_path(product_id: i, opiton_id: ii)
   %br
+  %hr
 - session[:cart].each_with_index do |c, i|
   = c
   %br

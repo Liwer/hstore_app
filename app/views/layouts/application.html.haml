@@ -6,13 +6,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    // - flash.each do |name, msg|
-    //   = content_tag :div, msg.html_safe#, id: "flash_#{name}", class: "alert alert-#{name}"
-    // %br
-    // = session[:cart]
-    // %br
-    // %br
-    // = link_to "Clear cart", clear_cart_path
+    - flash.each do |name, msg|
+      = content_tag :div, msg.html_safe#, id: "flash_#{name}", class: "alert alert-#{name}"
+    %br
+    = session[:cart]
+    %br
+    %br
+    = link_to "Clear cart", clear_cart_path
     // = link_to "remove", rm_from_cart_path
     // %br
     // = link_to "My cart", cart_path
@@ -35,9 +35,9 @@
             %nav
               %ul.sf-menu.sf-js-enabled
                 %li.current
-                  %a{:href => "index.html"}
-                    Home
-                    %strong
+                  = link_to "Home", root_path
+                %li
+                  = link_to "My cart", cart_path
                 %li
                   %a{:href => "index-1.html"}
                     About Us

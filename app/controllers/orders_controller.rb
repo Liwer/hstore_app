@@ -5,10 +5,11 @@ class OrdersController < ApplicationController
 
   def cart
     if session[:cart].nil?
-      redirect_to :back
+      redirect_to root_path
       flash[:notice] = "Cart is empty"
     else
       ids = session[:cart].map { |p| p['product_id'] }
+      session[:cart].sort_by! { |k| k['product_id'] }
       products = Product.find(ids)
       cart = session[:cart]
       @order = []
@@ -25,26 +26,31 @@ class OrdersController < ApplicationController
         @order << result
       end
     end
-    def remove_from_cart
-      session[:cart].slice!(params['product_id'].to_i) if session[:cart][params['product_id'].to_i]
-      if session[:cart].empty?
-        session.delete(:cart)
-        redirect_to root_path
-      else
-        redirect_to :back
-      end
-    end
   end
+
+  def remove_product
+    product = params['product_id'].to_i
+
+    begin
+      session[:cart].slice!(product)
+      session.delete(:cart) if session[:cart].empty?
+    rescue
+      flash[:notice] = "Product or option is not found"
+    end
+    redirect_to cart_path
+  end
+
   def remove_option
-    if session[:cart][params['product_id'].to_i]
-    if session[:cart][params['product_id'].to_i]['options'][params['option_id'].to_i]
-    session[:cart][params['product_id'].to_i]['options'].slice!(params['option_id'].to_i)
+    product = params['product_id'].to_i
+    option = params['option_id'].to_i
+
+    begin
+      session[:cart][product]['options'].slice!(option)
+      session[:cart].slice!(product) if session[:cart][product]['options'].empty?
+      session.delete(:cart) if session[:cart].empty?
+    rescue
+      flash[:notice] = "Product or option is not found"
     end
-    end
-    if session[:cart][params['prodct_id'].to_i]['options'].empty?
-      redirect_to root_path
-    else
-    redirect_to :back
-    end
+    redirect_to cart_path
   end
 end

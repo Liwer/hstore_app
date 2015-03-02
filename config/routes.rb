@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'products' => 'products#index', as: 'products'
+  get 'cart' => 'orders#cart', as: 'cart'
+
   post 'add_to_cart' => 'products#add_to_cart', as: 'add_to_cart'
   get 'products/clear_cart' => 'products#clear_cart', as: 'clear_cart'
-  get 'products/remove_from_cart' => 'products#remove_from_cart', as: 'rm_from_cart'
-  get 'cart' => 'orders#cart', as: 'cart'
+
+  get 'remove_product' => 'orders#remove_product', as: 'rm_product'
   get 'remove_option' => 'orders#remove_option', as: 'rm_option'
+
   get 'products/:id' => 'products#show', as: 'show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
