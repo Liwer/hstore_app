@@ -14,13 +14,13 @@ class OrdersController < ApplicationController
       cart = session[:cart]
       @order = []
 
-      products.each do |product|
+      products.each_with_index do |product, i|
         result = {}
         result['name'] = product.name
         result['options'] = []
         current_product = cart.find { |p| p['product_id'] == product.id.to_s }
-        current_product['options'].each do |o|
-          options = JSON.parse(product.options[o['options_id'].to_i].to_json).merge("count" => "#{o['count']}")
+        current_product['options'].each_with_index do |o, i|
+          options = JSON.parse(product.options[i].to_json).merge("count" => "#{o['count']}")
           result['options'] << options
         end
         @order << result
