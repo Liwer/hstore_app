@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'cart' => 'orders#cart', as: 'cart'
 
   post 'add_to_cart' => 'products#add_to_cart', as: 'add_to_cart'
-  get 'products/clear_cart' => 'products#clear_cart', as: 'clear_cart'
+  get 'clear_cart' => 'products#clear_cart', as: 'clear_cart'
 
   get 'remove_product' => 'orders#remove_product', as: 'rm_product'
   get 'remove_option' => 'orders#remove_option', as: 'rm_option'
