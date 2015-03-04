@@ -55,8 +55,7 @@ class OrdersController < ApplicationController
 
   def option_count
     product = params['product_id'].to_i
-    count = (params['count']['count'].to_i) + 1
-   abort session[:cart][product]['options'].count.inspect 
+   abort session[:cart][product]['options'][params['count'].to_i] +1.inspect
   redirect_to cart_path  
     end
 end
