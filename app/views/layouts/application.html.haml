@@ -30,22 +30,20 @@
         .grid_12.txt_cntr
           .white_bg
             %h1
-              %a{:href => "index.html"}
+              %a{:href => "/"}
                 %img{:alt => "Honey", :src => "/assets/logo.png"}/
             %nav
               %ul.sf-menu.sf-js-enabled
                 %li.current
-                  = link_to "Home", root_path
-                %li
-                  = link_to "My cart", cart_path
+                  = link_to "Кошик", cart_path
                 %li
                   %a{:href => "index-1.html"}
                     About Us
                     %strong
                 %li
-                  %a.sf-with-ul{:href => "index-2.html"}
+                  %a.sf-with-ul
                     %span>
-                    Honey Products
+                      = link_to "Медова продукція", products_path 
                     %strong
                     %span.sf-sub-indicator
                   %ul.submenu{:style => "display: none; visibility: hidden;"}
