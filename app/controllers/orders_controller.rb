@@ -43,7 +43,6 @@ class OrdersController < ApplicationController
   def remove_option
     product = params['product_id'].to_i
     option = params['option_id'].to_i
-
     begin
       session[:cart][product]['options'].slice!(option)
       session[:cart].slice!(product) if session[:cart][product]['options'].empty?
@@ -53,4 +52,11 @@ class OrdersController < ApplicationController
     end
     redirect_to cart_path
   end
+
+  def option_count
+    product = params['product_id'].to_i
+    count = (params['count']['count'].to_i) + 1
+   abort session[:cart][product]['options'].count.inspect 
+  redirect_to cart_path  
+    end
 end

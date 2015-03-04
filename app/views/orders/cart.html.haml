@@ -1,17 +1,20 @@
 - @order.each_with_index do |p, i|
   %strong
-    = link_to "Remove product", rm_product_path(product_id: i)
+  = link_to "Remove product", rm_product_path(product_id: i)
   %br
   = p['name']
   %strong
-    = i
+  = i
   %br
   - p['options'].each_with_index do |o, ii|
     - o.each do |k,v|
       = "#{k}: #{v}"
       %br
+    %br  
+      = link_to 'add_count', option_count_path(count: o)
+    %br
     %strong
-      = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
+    = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
     %br
   %br
   %hr
@@ -20,11 +23,3 @@
   %br
   = i
   %br
-  %br
-  
-
-
-  
-
-
-
