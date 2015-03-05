@@ -56,8 +56,22 @@ class OrdersController < ApplicationController
   def option_count
     product = params['product_id'].to_i
     option = params['option_id'].to_i
-    count = session[:cart][product]['options'][option]['count'].to_i + 1
+    begin
+    if params['change'] == 'plus' 
+      count = session[:cart][product]['options'][option]['count'].to_i + 1
+    else
+      if count = session[:cart][product]['options'][option]['count'].to_i == 1
+        flash['notice'] = "Продукт в однині."
+        count = 1
+      else
+        count = session[:cart][product]['options'][option]['count'].to_i - 1
+      end
+    end
     session[:cart][product]['options'][option]['count'] = count
-    redirect_to cart_path  
+    rescue 
+      flash['notice'] = "Продукт чи опція не знайдені"
+    end
+    redirect_to cart_path
+
   end
 end
