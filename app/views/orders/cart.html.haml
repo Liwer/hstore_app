@@ -11,7 +11,7 @@
       = "#{k}: #{v}"
       %br
     %br  
-      = link_to 'add_count', option_count_path(count: o)
+      = link_to 'add_count', option_count_path(product_id: i, option_id: ii)
     %br
     %strong
     = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
