@@ -754,6 +754,12 @@ footer a:hover{color:#f7bc00;}
 .col-3{width: 13%; text-align: center !important;}
 .col-4{width: 13%; text-align: center !important;}
 
+.col-ord-1{width: 74%; padding-left: 18px;}
+.col-ord-2{width: 13%; padding-left: 32px;}
+
+p.order-option{font-size: 85% !important;}
+#submit-button{border: none !important; margin-top: 30px !important;}
+
 /*----------- end table ---------------*/
 
 /*==================================RESPONSIVE LAYOUTS===============================================*/

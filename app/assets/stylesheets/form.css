@@ -130,6 +130,10 @@
 	padding: 0px 29px;
 	float: left;
 }
+
+#order_description {
+	height: 116px !important;
+}
 /*--- contact_form end------*/
 
 @media only screen and (max-width: 995px) {
