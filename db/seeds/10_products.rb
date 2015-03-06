@@ -3,6 +3,7 @@ Product.destroy_all
 
 
 Product.create(name: "Мед натуральний, квітковий, лісовий",
+               category: 'food',
                active: true,
                main: false,
                options:[{
@@ -18,6 +19,7 @@ Product.create(name: "Мед натуральний, квітковий, ліс�
 ])
 
 Product.create(name: "Мед натуральний, акацієвий, липовий, гречаний",
+               category: 'food',
                active: true,
                main: false,
                options:[{
@@ -33,6 +35,7 @@ Product.create(name: "Мед натуральний, акацієвий, лип�
 ])
 
 Product.create(name: "Мед натуральний, рапсовий, соняшниковий",
+               category: 'food',
                active: true,
                main: false,
                options:[{
