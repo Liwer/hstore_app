@@ -18,10 +18,12 @@ class OrdersController < ApplicationController
         result = {}
         result['name'] = product.name
         result['options'] = []
+        product_price = []
         current_product = cart.find { |p| p['product_id'] == product.id.to_s }
         current_product['options'].each_with_index do |o, i|
           options = JSON.parse(product.options[i].to_json).merge("count" => "#{o['count']}")
           result['options'] << options
+        abort  result['options']['price'].inspect
         end
         @order << result
       end
@@ -61,7 +63,7 @@ class OrdersController < ApplicationController
       count = session[:cart][product]['options'][option]['count'].to_i + 1
     else
       if count = session[:cart][product]['options'][option]['count'].to_i == 1
-        flash['notice'] = "Продукт в однині."
+        flash['notice'] = "Залишився один продукт"
         count = 1
       else
         count = session[:cart][product]['options'][option]['count'].to_i - 1
@@ -73,5 +75,9 @@ class OrdersController < ApplicationController
     end
     redirect_to cart_path
 
+  end
+
+  private
+  def total_price
   end
 end
