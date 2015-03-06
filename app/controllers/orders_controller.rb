@@ -22,12 +22,14 @@ class OrdersController < ApplicationController
         current_product = cart.find { |p| p['product_id'] == product.id.to_s }
         current_product['options'].each_with_index do |o, i|
           options = JSON.parse(product.options[i].to_json).merge("count" => "#{o['count']}")
+          product_price << (options['price'].to_i * options['count'].to_i) 
           result['options'] << options
-        abort  result['options']['price'].inspect
         end
+        result['price'] = (product_price.inject{|sum,x| sum + x})
         @order << result
       end
     end
+    @cart_price = (@order.map {|h| h['price'] }).inject {|sum,x| sum + x }
   end
 
   def remove_product

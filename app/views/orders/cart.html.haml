@@ -4,7 +4,8 @@
   %br
   = p['name']
   %strong
-  = i
+  Total Price
+  = p['price']
   %br
   - p['options'].each_with_index do |o, ii|
     - o.each do |k,v|
@@ -18,6 +19,9 @@
     %strong
     = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
     %br
+Cart Price
+= @cart_price
+%br
   %br
   %hr
 - session[:cart].each_with_index do |c, i|
