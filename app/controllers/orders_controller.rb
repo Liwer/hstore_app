@@ -1,9 +1,11 @@
 class OrdersController < ApplicationController
   def create
+    abort params.inspect
     @orders = Order.new
   end
 
   def cart
+    @order = Order.new
     if session[:cart].nil?
       redirect_to root_path
       flash[:notice] = "Cart is empty"
@@ -12,7 +14,7 @@ class OrdersController < ApplicationController
       session[:cart].sort_by! { |k| k['product_id'] }
       products = Product.find(ids)
       cart = session[:cart]
-      @order = []
+      @cart = []
 
       products.each_with_index do |product, i|
         result = {}
@@ -26,10 +28,10 @@ class OrdersController < ApplicationController
           result['options'] << options
         end
         result['price'] = (product_price.inject{|sum,x| sum + x})
-        @order << result
+        @cart << result
       end
     end
-    @cart_price = (@order.map {|h| h['price'] }).inject {|sum,x| sum + x }
+    @cart_price = (@cart.map {|h| h['price'] }).inject {|sum,x| sum + x }
   end
 
   def remove_product

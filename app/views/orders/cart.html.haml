@@ -1,31 +1,80 @@
-- @order.each_with_index do |p, i|
-  %strong
-  = link_to "Remove product", rm_product_path(product_id: i)
-  %br
-  = p['name']
-  %strong
-  Total Price
-  = p['price']
-  %br
-  - p['options'].each_with_index do |o, ii|
-    - o.each do |k,v|
-      = "#{k}: #{v}"
-      %br
-    %br  
-      = link_to 'add_count', option_count_path(product_id: i, option_id: ii, change: 'plus')
-      %br
-      = link_to 'rm_conut', option_count_path(product_id: i, option_id: ii, change: 'minus')
-    %br
-    %strong
-    = link_to "rmOption", rm_option_path(product_id: i, option_id: ii)
-    %br
-Cart Price
-= @cart_price
-%br
-  %br
-  %hr
-- session[:cart].each_with_index do |c, i|
-  = c
-  %br
-  = i
-  %br
+.container_12
+  .grid_12
+    .wrapper
+      .grid_8.alpha
+        %h2 Order form
+        %p.marTop9
+          Nulla facilisis at vero eros et accumsan etusto odio dignissim quimen blandit praesen luptatum zril delenit augue duis dolore teun feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+          %br/
+          = succeed "Shipping" do
+            %br/
+        = simple_form_for :order, url: '/order', html: { id: 'contact-form' } do |f|
+          .success-message Form submitted!
+          .wrapper
+            .grid_4.alpha
+              %label.name
+                = f.input :name, placeholder: 'Name*:', label: false
+              %label.phone
+                = f.input :phone, placeholder: 'Phone*:', label: false
+              %label.city
+                = f.input :city, placeholder: 'City*:', label: false
+            .grid_4.omega
+              %label.desciption
+                = f.input :description, as: :text, placeholder: 'Description:', label: false
+            .clear
+            %table.table-1
+              %tbody
+                %tr.t-header
+                  %th.col-ord-1
+                    .row
+                      .span4
+                        Product
+                      .span1
+                        %p.text-right
+                          Qty
+                  %th.col-ord-2 Price
+                - @cart.each_with_index do |p, i|
+                  %tr
+                    %td.col-ord-1
+                      %strong
+                        = p['name']
+                      %br
+                      - p['options'].each_with_index do |o, ii|
+                        .row
+                          .span4
+                            = "Объем: #{o['volume']}" if o['volume']
+                            = "(нетто: #{o['mass']})," if o['mass']
+                            = "Кол-во: #{o['amount']})," if o['amount']
+                            = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
+                          .span1
+                            %p.text-right
+                              = o['count']
+
+                    %td.col-ord-2
+                      = p['price']
+                %tr
+                  %th.col-ord-1
+                    Итог:
+                  %td.col-ord-2
+                    %strong
+                      = @cart_price
+
+          .form_btns
+            = link_to "Clear", clear_cart_path, class: 'more_btn2'
+            %button{type: 'button', class: 'more_btn2', id: 'submit-button'}
+              Submit
+
+      .grid_4.omega
+        %h2 How to order
+        %img.img5{:alt => "", :src => "assets/page5_pic1.jpg"}/
+        %h3
+          %a{:href => "#"} Vestibulum iaculis
+        %p Pit wisi enim ad minim veniamqu uis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan etIusto odio dignissim.
+        %h3
+          %a{:href => "#"} Lorem ipsum dolor sit
+        %p
+          Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseq.
+          %br/
+          = succeed "Vel" do
+            %br/
+    .indent1
