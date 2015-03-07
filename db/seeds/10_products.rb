@@ -3,7 +3,7 @@ Product.destroy_all
 
 
 Product.create(name: "Мед натуральний, квітковий, лісовий",
-               category: 'food',
+               category: 'honey',
                active: true,
                main: false,
                options:[{
@@ -19,7 +19,7 @@ Product.create(name: "Мед натуральний, квітковий, ліс�
 ])
 
 Product.create(name: "Мед натуральний, акацієвий, липовий, гречаний",
-               category: 'food',
+               category: 'honey',
                active: true,
                main: false,
                options:[{
@@ -35,7 +35,7 @@ Product.create(name: "Мед натуральний, акацієвий, лип�
 ])
 
 Product.create(name: "Мед натуральний, рапсовий, соняшниковий",
-               category: 'food',
+               category: 'honey',
                active: true,
                main: false,
                options:[{
@@ -51,6 +51,7 @@ Product.create(name: "Мед натуральний, рапсовий, соня�
 ])
 
 Product.create(name: "Мед щільниковий",
+               category: 'honey',
                active: true,
                main: false,
                options:[{
@@ -60,6 +61,7 @@ Product.create(name: "Мед щільниковий",
 ])
 
 Product.create(name: "Мед щільниковий в дерев'яній рамці",
+               category: 'honey',
                active: true,
                main: false,
                options:[{
@@ -68,6 +70,7 @@ Product.create(name: "Мед щільниковий в дерев'яній ра�
 ])
 
 Product.create(name: "Забрус",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -78,6 +81,7 @@ Product.create(name: "Забрус",
 ])
 
 Product.create(name: "Пилок квітковий",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -91,6 +95,7 @@ Product.create(name: "Пилок квітковий",
 ])
 
 Product.create(name: "Перга очищена",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -104,6 +109,7 @@ Product.create(name: "Перга очищена",
 ])
 
 Product.create(name: "Віск забрусовий",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -121,6 +127,7 @@ Product.create(name: "Віск забрусовий",
 ])
 
 Product.create(name: "Прополіс",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -134,6 +141,7 @@ Product.create(name: "Прополіс",
 ])
 
 Product.create(name: "Підмор бджолинний",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -152,6 +160,7 @@ Product.create(name: "Підмор бджолинний",
 ])
 
 Product.create(name: "Настойка прополіса 10%",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -165,6 +174,7 @@ Product.create(name: "Настойка прополіса 10%",
 ])
 
 Product.create(name: "Екстракт воскової молі 20%",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -178,6 +188,7 @@ Product.create(name: "Екстракт воскової молі 20%",
 ])
 
 Product.create(name: "Екстракт прополіса 30%",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -187,6 +198,7 @@ Product.create(name: "Екстракт прополіса 30%",
 ])
 
 Product.create(name: "Настойка бджолиного подмору",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -200,6 +212,7 @@ Product.create(name: "Настойка бджолиного подмору",
 ])
 
 Product.create(name: "Екстракт трутневих личинок",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -213,6 +226,7 @@ Product.create(name: "Екстракт трутневих личинок",
 ])
 
 Product.create(name: "Маточне молочко, нативне",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -222,6 +236,7 @@ Product.create(name: "Маточне молочко, нативне",
 ])
 
 Product.create(name: "Маточне молочко 15г, з медом 700г",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -231,6 +246,7 @@ Product.create(name: "Маточне молочко 15г, з медом 700г",
 ])
 
 Product.create(name: "Маточники консервовані в медові",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -240,6 +256,7 @@ Product.create(name: "Маточники консервовані в медов�
 ])
 
 Product.create(name: "Трутневе молочко",
+               category: 'h_product',
                active: true,
                main: false,
                options:[{
@@ -253,6 +270,7 @@ Product.create(name: "Трутневе молочко",
 ])
 
 Product.create(name: "Трутневе молочко(100г) з медом(600г)",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -262,6 +280,7 @@ Product.create(name: "Трутневе молочко(100г) з медом(600г
 ])
 
 Product.create(name: "Чудо-мазь на основі воску",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -275,6 +294,7 @@ Product.create(name: "Чудо-мазь на основі воску",
 ])
 
 Product.create(name: "Чудо мазь прополісна 10%",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -288,6 +308,7 @@ Product.create(name: "Чудо мазь прополісна 10%",
 ])
 
 Product.create(name: "Чудо мазь прополісна 30%",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -297,6 +318,7 @@ Product.create(name: "Чудо мазь прополісна 30%",
 ])
 
 Product.create(name: "Мазь з возковою молю 10%",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -306,6 +328,7 @@ Product.create(name: "Мазь з возковою молю 10%",
 ])
 
 Product.create(name: "Мазь з подмором бджолиним 10%",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -315,6 +338,7 @@ Product.create(name: "Мазь з подмором бджолиним 10%",
 ])
 
 Product.create(name: "Крем для лиця з маточним молочком",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -324,6 +348,7 @@ Product.create(name: "Крем для лиця з маточним молочк�
 ])
 
 Product.create(name: "Крем для рук",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -333,6 +358,7 @@ Product.create(name: "Крем для рук",
 ])
 
 Product.create(name: "Крем для масажу",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -343,6 +369,7 @@ Product.create(name: "Крем для масажу",
 
 
 Product.create(name: "Медовуха",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -358,6 +385,7 @@ Product.create(name: "Медовуха",
 ])
 
 Product.create(name: "Бальзам",
+               category: 'extract',
                active: true,
                main: false,
                options:[{
@@ -373,6 +401,7 @@ Product.create(name: "Бальзам",
 ])
 
 Product.create(name: "Мед з пилком",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -383,6 +412,7 @@ Product.create(name: "Мед з пилком",
 ])
 
 Product.create(name: "Мед з прополісом 10%",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -393,6 +423,7 @@ Product.create(name: "Мед з прополісом 10%",
 ])
 
 Product.create(name: "Мед з маточним молочком та гомогенатом трутневих личинок",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -404,6 +435,7 @@ Product.create(name: "Мед з маточним молочком та гомо�
 
 
 Product.create(name: "Мед з пилком, пергою, прополісом",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -414,6 +446,7 @@ Product.create(name: "Мед з пилком, пергою, прополісом
 ])
 
 Product.create(name: "Мед з горіхами і сухофруктами",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -424,6 +457,7 @@ Product.create(name: "Мед з горіхами і сухофруктами",
 ])
 
 Product.create(name: "Мед з горіхами",
+               category: 'ointment',
                active: true,
                main: false,
                options:[{
@@ -434,6 +468,7 @@ Product.create(name: "Мед з горіхами",
 ])
 
 Product.create(name: "Вулик лежак на 24 рамки",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -441,6 +476,7 @@ Product.create(name: "Вулик лежак на 24 рамки",
 }])
 
 Product.create(name: "Вулик український на 24 рамки",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -448,6 +484,7 @@ Product.create(name: "Вулик український на 24 рамки",
 }])
 
 Product.create(name: "Вулик корпусний на 30 рамок",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -455,6 +492,7 @@ Product.create(name: "Вулик корпусний на 30 рамок",
 }])
 
 Product.create(name: "Вулик альпійський на 48 рамок",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -462,6 +500,7 @@ Product.create(name: "Вулик альпійський на 48 рамок",
 }])
 
 Product.create(name: "Рамка",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -469,6 +508,7 @@ Product.create(name: "Рамка",
 }])
 
 Product.create(name: "Кормушка дерев'яна на 4 літра",
+               category: 'equipment',
                active: true,
                main: false,
                options: [{
@@ -476,6 +516,7 @@ Product.create(name: "Кормушка дерев'яна на 4 літра",
 }])
 
 Product.create(name: "Кормушка пластмасова надрамочна на 1.8 літра",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
@@ -483,6 +524,7 @@ Product.create(name: "Кормушка пластмасова надрамочн
 }])
 
 Product.create(name: "Ящики переносні на 6 рамок",
+               category: 'equipment',
                active: true,
                main: false,
                options:[{
