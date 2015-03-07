@@ -2,7 +2,7 @@
   .grid_12
     .wrapper
       .grid_8.alpha
-        %h2 Order form
+        %h2 Замовлення
         %p.marTop9
           Nulla facilisis at vero eros et accumsan etusto odio dignissim quimen blandit praesen luptatum zril delenit augue duis dolore teun feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
           %br/
@@ -13,14 +13,14 @@
           .wrapper
             .grid_4.alpha
               %label.name
-                = f.input :name, placeholder: 'Name*:', label: false
+                = f.input :name, placeholder: 'ПІБ*:', label: false
               %label.phone
-                = f.input :phone, placeholder: 'Phone*:', label: false
+                = f.input :phone, placeholder: 'Телефон*:', label: false
               %label.city
-                = f.input :city, placeholder: 'City*:', label: false
+                = f.input :city, placeholder: 'Місто*:', label: false
             .grid_4.omega
               %label.desciption
-                = f.input :description, as: :text, placeholder: 'Description:', label: false
+                = f.input :description, as: :text, placeholder: 'Адреса та коментарі:', label: false
             .clear
             %table.table-1
               %tbody
@@ -28,11 +28,11 @@
                   %th.col-ord-1
                     .row
                       .span4
-                        Product
+                        Продукт
                       .span1
                         %p.text-right
-                          Qty
-                  %th.col-ord-2 Price
+                          Кількість
+                  %th.col-ord-2 Ціна
                 - @cart.each_with_index do |p, i|
                   %tr
                     %td.col-ord-1
@@ -42,9 +42,9 @@
                       - p['options'].each_with_index do |o, ii|
                         .row
                           .span4
-                            = "Объем: #{o['volume']}" if o['volume']
+                            = "Об'єм: #{o['volume']}" if o['volume']
                             = "(нетто: #{o['mass']})," if o['mass']
-                            = "Кол-во: #{o['amount']})," if o['amount']
+                            = "Кількість: #{o['amount']})," if o['amount']
                             = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
                           .span1
                             %p.text-right
@@ -54,18 +54,18 @@
                       = p['price']
                 %tr
                   %th.col-ord-1
-                    Итог:
+                    Всього:
                   %td.col-ord-2
                     %strong
                       = @cart_price
 
           .form_btns
-            = link_to "Clear", clear_cart_path, class: 'more_btn2'
+            = link_to "Очистити кошик", clear_cart_path, class: 'more_btn2'
             %button{type: 'button', class: 'more_btn2', id: 'submit-button'}
-              Submit
+              Відправити
 
       .grid_4.omega
-        %h2 How to order
+        %h2 Доставка
         %img.img5{:alt => "", :src => "assets/page5_pic1.jpg"}/
         %h3
           %a{:href => "#"} Vestibulum iaculis
