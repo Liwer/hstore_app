@@ -43,5 +43,4 @@ class ProductsController < ApplicationController
     session.delete(:cart)
     redirect_to root_path
   end
-
 end

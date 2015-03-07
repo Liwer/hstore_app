@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title HstoreApp
+    %title Бджолина хата
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -23,20 +23,20 @@
                   = link_to "Кошик", cart_path
                 %li
                   %a{:href => "index-1.html"}
-                    About Us
+                    Вуликотерапія
                     %strong
                 %li
                   %a.sf-with-ul
                     %span>
-                      = link_to "Медова продукція", products_path 
+                      = link_to "Продукція", products_path 
                     %strong
                     %span.sf-sub-indicator
                   %ul.submenu{:style => "display: none; visibility: hidden;"}
                     %li
-                      %a{:href => "#"} Lorem
+                      %a{:href => "#"} Інвентар та обладнання
                     %li.sub-menu
                       %a.sf-with-ul{:href => "#"}
-                        Drtyop
+                        Бджолопродукція
                         %span.sf-sub-indicator
                       %ul.submenu2{:style => "display: none; visibility: hidden;"}
                         %li

@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
   def create
-    abort params.inspect
     @orders = Order.new
+
+    @orders.save
+    redirect_to root_path
   end
 
   def cart
@@ -41,7 +43,7 @@ class OrdersController < ApplicationController
       session[:cart].slice!(product)
       session.delete(:cart) if session[:cart].empty?
     rescue
-      flash[:notice] = "Product or option is not found"
+      flash[:notice] = "Продукт чи опція не знайдені"
     end
     redirect_to cart_path
   end
@@ -54,7 +56,7 @@ class OrdersController < ApplicationController
       session[:cart].slice!(product) if session[:cart][product]['options'].empty?
       session.delete(:cart) if session[:cart].empty?
     rescue
-      flash[:notice] = "Product or option is not found"
+      flash[:notice] = "Продукт чи опція не знайдені"
     end
     redirect_to cart_path
   end
