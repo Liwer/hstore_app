@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   def create
-    @orders = Order.new
-
+    @orders = Order.new(order_params)
     @orders.save
+    session.delete(:cart)
     redirect_to root_path
   end
 
@@ -32,8 +32,8 @@ class OrdersController < ApplicationController
         result['price'] = (product_price.inject{|sum,x| sum + x})
         @cart << result
       end
-    end
     @cart_price = (@cart.map {|h| h['price'] }).inject {|sum,x| sum + x }
+    end
   end
 
   def remove_product
@@ -84,6 +84,8 @@ class OrdersController < ApplicationController
   end
 
   private
-  def total_price
+  def order_params
+    params.require(:order).permit(:name, :phone, :city, :description)
+    abort params['product_id'].inspect
   end
 end
