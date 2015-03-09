@@ -1,7 +1,7 @@
 Category.delete_all
 
-Category.create(name: 'honey')
-Category.create(name: 'extract')
-Category.create(name: 'h_product')
-Category.create(name: 'ointment')
-Category.create(name: 'equipment')
+Category.create(name: 'Мед різних сортів')
+Category.create(name: 'Настійки та Екстракти')
+Category.create(name: 'Бджолопродукти')
+Category.create(name: 'Медові суміші та мазі')
+Category.create(name: 'Інвентар та обладнання')
