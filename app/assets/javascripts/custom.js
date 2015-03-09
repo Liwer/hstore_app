@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $('#submit-button').click(function () {
+  $(document).on("click",
+  "#submit-button",function () {
     $('#contact-form').submit();
   });
 });
