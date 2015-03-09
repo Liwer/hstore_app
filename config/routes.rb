@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'products' => 'products#index', as: 'products'
   get 'cart' => 'orders#cart', as: 'cart'
   post 'order' => 'orders#create', as: 'order'
-  get 'categories' => 'products#categories', as: 'category'
   
   post 'add_to_cart' => 'products#add_to_cart', as: 'add_to_cart'
   get 'clear_cart' => 'products#clear_cart', as: 'clear_cart'
