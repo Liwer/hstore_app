@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
     @orders.save
     session.delete(:cart)
     redirect_to root_path
+    
   end
 
   def cart
@@ -80,12 +81,10 @@ class OrdersController < ApplicationController
       flash['notice'] = "Продукт чи опція не знайдені"
     end
     redirect_to cart_path
-
   end
-
-  private
+ private
   def order_params
-    params.require(:order).permit(:name, :phone, :city, :description)
-    abort params['product_id'].inspect
+   params.require(:order).permit(:name, :phone, :city, :description)
+    
   end
 end
