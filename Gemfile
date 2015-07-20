@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
  gem 'therubyracer', platforms: :ruby
 gem 'mongoid', '4.0.0'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', git: 'https://github.com/rails/jquery-rails.git', tag: 'v2.3.0'
+gem 'jquery-rails'#, git: 'https://github.com/rails/jquery-rails.git', tag: 'v2.3.0'
 # Turbolinks makes followin' links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -23,6 +23,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid_slug'
 gem 'simple_form'
+gem 'bson_ext'
+gem 'devise'
+gem 'rails_admin', '0.6.8'
+gem 'cancan', '1.6.10'
+gem 'warden', '1.2.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

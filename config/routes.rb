@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :user
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   get 'remove_option' => 'orders#remove_option', as: 'rm_option'
   get 'option_count' => 'orders#option_count', as: 'option_count'
   get 'products/:id' => 'products#show', as: 'show'
+
+  get 'category' => 'products#category', as: 'cat'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

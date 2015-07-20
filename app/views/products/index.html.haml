@@ -1,3 +1,5 @@
+= link_to 'cat', cat_path
+%br
 - @products.each do |p|
   = link_to p.try(:name), show_path(p)
   %br
@@ -6,6 +8,5 @@
     = o[:volume]
     = o[:mass]
     %br
-  %br
-%br
-
+  %br  
+%br  

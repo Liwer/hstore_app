@@ -2,12 +2,17 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all.to_a
+   # abort @products.inspect
   end
-
+  
+  def category
+    @category = Product.find(params[:category])
+  end
+  
   def show
     @product = Product.find(params[:id])
   end
-
+  
   def add_to_cart
     order = params[:order]
     add = Proc.new { |p| session[:cart] << { product_id: p[:product_id], options: [{ option_id: p[:option_id], count: p[:count] }] } }
@@ -38,7 +43,6 @@ class ProductsController < ApplicationController
     end
     redirect_to :back
   end
-
   def clear_cart
     session.delete(:cart)
     redirect_to root_path

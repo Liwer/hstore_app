@@ -55,6 +55,10 @@
                   %a{:href => "index-5.html"}
                     Contacts
                     %strong
+                %li      
+                %div
+                  -if user_signed_in?
+                    Welcome #{current_user.email}#{link_to "Sign out", destroy_user_session_path, :method => :delete}
     .main
       .div-content
         = yield
