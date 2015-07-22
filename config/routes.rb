@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   get 'remove_option' => 'orders#remove_option', as: 'rm_option'
   get 'option_count' => 'orders#option_count', as: 'option_count'
   get 'products/:id' => 'products#show', as: 'show'
-
-  get 'category' => 'products#category', as: 'cat'
+  
+  get ':products/:category/:id/:category_id' => 'products#category', as: 'category'
+  #get 'category' => 'products#category', as: 'category'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
