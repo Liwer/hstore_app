@@ -4,5 +4,6 @@ class Product
   field :options, type: Array
   field :active, type: Boolean
   field :main, type: Boolean
-  field :category, type: String
+  #belongs_to :order
+  belongs_to :category
 end
