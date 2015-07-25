@@ -21,6 +21,8 @@
             .grid_4.omega
               %label.desciption
                 = f.input :description, as: :text, placeholder: 'Адреса та коментарі:', label: false
+              %label.products
+                = f.hidden_field  :products, :value => $products
             .clear
             %table.table-1
               %tbody
@@ -37,9 +39,9 @@
                   %tr
                     %td.col-ord-1
                       %strong
-                        = p['name']
+                        = p[:name]
                       %br
-                      - p['options'].each_with_index do |o, ii|
+                      - p[:options].each_with_index do |o, ii|
                         .row
                           .span4
                             = "Об'єм: #{o['volume']}" if o['volume']
@@ -49,9 +51,8 @@
                           .span1
                             %p.text-right
                               = o['count']
-
-                    %td.col-ord-2
-                      = p['price']
+                            %td.col-ord-2
+                              = o['price']
                 %tr
                   %th.col-ord-1
                     Всього:
