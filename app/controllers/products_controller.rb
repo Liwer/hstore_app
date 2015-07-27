@@ -44,6 +44,5 @@ class ProductsController < ApplicationController
   end
 
   def category
-    @produc = Product.all.to_a
-  end
+end
 end
