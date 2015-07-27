@@ -3,7 +3,7 @@
     .wrapper
       %h2
         %img.img2.no_resize{:alt => "", :src => "/assets/cell_sign.png"}/
-        Products
+        Продукція
         - div_class = Proc.new do |i|
           - if i == 0
             - 'alpha'
@@ -18,14 +18,7 @@
                 %span.price_sign
                   = price(products)
                   %h5
-                  = link_to products.name, show_path(products)
-//          - else
-//            .wrapper.marTop1
-//              = link_to show_path(products), class: 'img_project' do
-//                %img{:alt => "", :src => "/assets/page1_pic2.jpg"}/
-//                %span.price_sign
-//                  = price(products)
-//              %h3
-//                %a
-//                  = link_to products.name, "#"
+                  = link_to products.name, show_path(products)            
+                  %br
+                  = products.category
 

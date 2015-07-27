@@ -4,7 +4,7 @@ Product.destroy_all
 
 Product.create(name: "Мед натуральний, квітковий, лісовий",
                category: 'Мед різних сортів',
-                active: true,
+               active: true,
                main: false,
                options:[{
   price: "30",
@@ -65,7 +65,7 @@ Product.create(name: "Мед щільниковий в дерев'яній ра�
                active: true,
                main: false,
                options:[{
-  prise: "70",
+  price: "70",
   mass: "1.3 кг"}
 ])
 
