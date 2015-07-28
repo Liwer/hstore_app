@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'option_count' => 'orders#option_count', as: 'option_count'
   get 'products/:id' => 'products#show', as: 'show'
   
-  get 'category' => 'products#category', as: 'category'
+  get 'category/:id' => 'products#category_show', as: 'category_show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

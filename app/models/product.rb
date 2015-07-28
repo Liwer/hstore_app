@@ -4,5 +4,5 @@ class Product
   field :options, type: Array
   field :active, type: Boolean
   field :main, type: Boolean
-  field :category, type: Array
+  field :category, type: String
 end

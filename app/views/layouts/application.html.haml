@@ -22,10 +22,6 @@
                 %li.current
                   = link_to "Кошик", cart_path
                 %li
-                  %a{:href => "index-1.html"}
-                    Вуликотерапія
-                    %strong
-                %li
                   %a.sf-with-ul
                     %span>
                       = link_to "Продукція", products_path 
@@ -43,6 +39,17 @@
                           %a{:href => "#"} Latest
                         %li
                           %a{:href => "#"} Archive
+                %li
+                  %a.sf-with-ul
+                    %span
+                      Категорії
+                    %strong
+                    %span.sf-sub-indicator
+                  %ul.submenu{:style => "display: none; visibility: hidden;"}
+                    - @categories = Category.all.to_a
+                    - @categories.each do |c|
+                      %li
+                      = link_to c.name, category_show_path(c)  
                 %li
                   %a{:href => "index-3.html"}
                     Gallery

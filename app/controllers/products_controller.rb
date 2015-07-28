@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
 
-  def category
-end
+  def category_show
+    @category = Category.find(params[:id])
+  end
 end
