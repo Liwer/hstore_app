@@ -1,0 +1,21 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @products.each do |product|
+      %tr
+        = link_to product.name, admin_product_path(product)
+      %br
+        // %td= link_to 'Show', admin_product
+        // %td= link_to 'Edit', edit_admin_product_path(product)
+        // %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_admin_product_path

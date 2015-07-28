@@ -1,0 +1,11 @@
+= simple_form_for(@admin_order) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :phone
+    = f.input :city
+    = f.input :description
+
+  .form-actions
+    = f.button :submit

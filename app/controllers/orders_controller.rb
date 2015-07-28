@@ -2,8 +2,9 @@ class OrdersController < ApplicationController
 
   def create
     @orders = Order.new(order_params)
+    @orders.product = session[:cart]
     @orders.save
-   # session.delete(:cart)
+    # session.delete(:cart)
     redirect_to root_path
   end
 

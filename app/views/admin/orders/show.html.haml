@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @admin_order.name
+%p
+  %b Phone:
+  = @admin_order.phone
+%p
+  %b City:
+  = @admin_order.city
+%p
+  %b Description:
+  = @admin_order.description
+
+= link_to 'Edit', edit_admin_order_path(@admin_order)
+\|
+= link_to 'Back', admin_orders_path

@@ -1,0 +1,27 @@
+%h1 Listing admin_orders
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Phone
+      %th City
+      %th Description
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @admin_orders.each do |admin_order|
+      %tr
+        %td= admin_order.name
+        %td= admin_order.phone
+        %td= admin_order.city
+        %td= admin_order.description
+        %td= link_to 'Show', admin_order
+        %td= link_to 'Edit', edit_admin_order_path(admin_order)
+        %td= link_to 'Destroy', admin_order, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Order', new_admin_order_path
