@@ -24,7 +24,7 @@
                 %li
                   %a.sf-with-ul
                     %span>
-                      = link_to "Продукція", products_path 
+                      = link_to "Вся продукція", products_path 
                     %strong
                     %span.sf-sub-indicator
                   %ul.submenu{:style => "display: none; visibility: hidden;"}
@@ -47,9 +47,11 @@
                     %span.sf-sub-indicator
                   %ul.submenu{:style => "display: none; visibility: hidden;"}
                     - @categories = Category.all.to_a
-                    - @categories.each do |c|
+                    - @categories.each do |category|
                       %li
-                      = link_to c.name, category_show_path(c)  
+                        = link_to category.name, category_show_path(category)
+                      %span.sf-sub-indicator
+                        %li
                 %li
                   %a{:href => "index-3.html"}
                     Gallery
