@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def add_to_cart
     order = params[:order]
-    add = Proc.new { |p| session[:cart] << { product_id: p[:product_id], options: [{ option_id: p[:option_id], count:  p[:count]  } ] } } 
+    add = Proc.new { |p| session[:cart] << { product_id: p[:product_id], name: p[:name], options: [{ option_id: p[:option_id], price: p[:price], volume: p[:volume], packing: p[:packing], mass: p[:mass], amount: p[:amount], count:  p[:count]  } ] } } 
     current_product = Proc.new { |cart| cart.select { |p| p[:product_id] == order[:product_id] } }
     current_option = Proc.new { |options| options.select { |h| h[:option_id] == order[:option_id] } }
     session[:cart] = [] if session[:cart].nil?
@@ -45,5 +45,6 @@ class ProductsController < ApplicationController
 
   def category_show
     @category = Category.find(params[:id])
+    @products = Product.where(category: @category.name).to_a
   end
 end

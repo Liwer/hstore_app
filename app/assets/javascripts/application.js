@@ -12,6 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require application
+//= require camera
+//= require compiled
+//= require custom
+//= require fbds
+//= require jquery-migrate-1.1.1
+//= require jquery.easing.1.3
+//= require jquery.equalheights
+//= require jquery.mobile.customized.min
+//= require jquery.mobilemenu
+//= require nr-593.min
+//= require owl.carousel
+//= require script
+//= require scroll_to_top
+//= require sForm
+//= require superfish
+//= require touchTouch.jquery
 

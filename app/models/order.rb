@@ -5,5 +5,4 @@ class Order
   field :city, type: String
   field :description, type: String
   field :product, type: Array
-  #has_many :products
 end

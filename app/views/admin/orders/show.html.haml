@@ -1,18 +1,18 @@
 %p#notice= notice
-
-%p
-  %b Name:
-  = @admin_order.name
-%p
-  %b Phone:
-  = @admin_order.phone
-%p
-  %b City:
-  = @admin_order.city
-%p
-  %b Description:
-  = @admin_order.description
-
-= link_to 'Edit', edit_admin_order_path(@admin_order)
-\|
+- @order.product.each_with_index do |p, i|
+  = p[:name]
+  %br
+  - p[:options].each_with_index do |o, ii|
+    = "Об'єм: #{o['volume']}" if o['volume']
+    = "(нетто: #{o['mass']})," if o['mass']
+    = "Кількість: #{o['amount']})," if o['amount']
+    = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
+    Count:
+    = o['count']
+    Price:
+    = o['price']
+    %br
+%br
+= link_to 'Edit', edit_admin_order_path(@order)
+%br
 = link_to 'Back', admin_orders_path

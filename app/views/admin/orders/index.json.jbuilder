@@ -1,4 +1,4 @@
-json.array!(@admin_orders) do |admin_order|
-  json.extract! admin_order, :id, :name, :phone, :city, :description
-  json.url admin_order_url(admin_order, format: :json)
+json.array!(@orders) do |order|
+  json.extract! order, :id, :name, :phone, :city, :description
+  json.url order_url(order, format: :json)
 end

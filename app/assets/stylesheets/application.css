@@ -10,6 +10,20 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require bootstrap
+ *= require camera
+ *= require form
+ *= require home
+ *= require icomoon
+ *= require livedemo
+ *= require owl.carousel
+ *= require reset
+ *= require responsive
+ *= require skeleton
+ *= require style
+ *= require style_1
+ *= require subscribe-form
+ *= require superfish
+ *= require touchTouch
  */

@@ -1,4 +1,4 @@
-%h1 Listing admin_orders
+%h1 Listing orders
 
 %table
   %thead
@@ -12,15 +12,15 @@
       %th
       
   %tbody
-    - @admin_orders.each do |admin_order|
+    - @orders.each do |order|
       %tr
-        %td= admin_order.name
-        %td= admin_order.phone
-        %td= admin_order.city
-        %td= admin_order.description
-        %td= link_to 'Show', admin_order
-        %td= link_to 'Edit', edit_admin_order_path(admin_order)
-        %td= link_to 'Destroy', admin_order, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= order.name
+        %td= order.phone
+        %td= order.city
+        %td= order.description
+        %td= link_to 'show', admin_order_path(order)
+        %td= link_to 'Edit', edit_admin_order_path(order)
+        %td= link_to 'Destroy', order, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
