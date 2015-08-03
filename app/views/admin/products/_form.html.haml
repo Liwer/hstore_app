@@ -1,8 +1,15 @@
 = simple_form_for [:admin, @product] do |f|
   = f.error_notification
-
   .form-inputs
     = f.input :name
-
+    = f.input :main
+    = f.input :category
+    = f.input :active
+    = f.simple_fields_for :options do |ff|
+      = ff.input :mass
+      = ff.input :volume
+      = ff.input :price
+      = ff.input :amount
+      = ff.input :packing
   .form-actions
     = f.button :submit

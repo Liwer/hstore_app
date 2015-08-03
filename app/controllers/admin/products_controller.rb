@@ -29,8 +29,8 @@ class Admin::ProductsController < ApplicationController
   # POST /admin/products
   # POST /admin/products.json
   def create
-    @product = Product.new(admin_product_params)
-
+    @product = Product.new(product_params)
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to [:admin, @product], notice: 'Product was successfully created.' }
@@ -41,7 +41,6 @@ class Admin::ProductsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /admin/products/1
   # PATCH/PUT /admin/products/1.json
   def update
@@ -67,13 +66,13 @@ class Admin::ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name, :active, :main, :category, :options )
+  end
 end

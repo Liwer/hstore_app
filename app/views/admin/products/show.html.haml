@@ -1,10 +1,25 @@
+- abort @product[:options].inspect
 %p#notice= notice
-
 = @product.name
-- @product[:options].each do |p|
-  = p[:count]
+- @product[:options].each_with_index do |p, i|
+  %br
+  %br
+  = "Option ##{i}"
+  %br
   Price:
   = p[:price]
+  %br
+  Volume:
+  = p[:volume]
+  %br
+  Amount:
+  = p[:amount]
+  %br
+  Mass:
+  = p[:mass]
+  %br
+  Packing:
+  = p[:packing]
 %br
 
 = link_to 'Edit', edit_admin_product_path(@product)
