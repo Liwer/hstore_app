@@ -29,6 +29,7 @@ class Admin::ProductsController < ApplicationController
   # POST /admin/products
   # POST /admin/products.json
   def create
+    abort product_params.inspect
     @product = Product.new(product_params)
     
     respond_to do |format|
@@ -73,6 +74,6 @@ class Admin::ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:name, :active, :main, :category, :options )
+    params.require(:product).permit(:name, :active, :main, :category, :options => [:mass, :volume, :price, :amount, :packing])
   end
 end

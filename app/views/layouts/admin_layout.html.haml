@@ -2,8 +2,8 @@
 %html
   %head
     %title Бджолина хата
-    = stylesheet_link_tag    'admin_css', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'admin_js', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'admin/admin_css', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'admin/admin_js', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     - flash.each do |name, msg|

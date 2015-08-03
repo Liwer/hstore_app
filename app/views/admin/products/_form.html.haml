@@ -5,11 +5,23 @@
     = f.input :main
     = f.input :category
     = f.input :active
-    = f.simple_fields_for :options do |ff|
-      = ff.input :mass
-      = ff.input :volume
-      = ff.input :price
-      = ff.input :amount
-      = ff.input :packing
+    %br
+    .options
+      = f.simple_fields_for :options do |ff|
+        #option_fields
+          // = render partial: "nested_fields", locals: { ff: ff }
+          = ff.input :mass
+          = ff.input :volume
+          = ff.input :price
+          = ff.input :amount
+          = ff.input :packing
+          = link_to "Remove option", "#"
+    %br
+    %br
+    %br
   .form-actions
     = f.button :submit
+
+%br
+%hr
+= link_to "Add fields", "#"
