@@ -1,27 +1,14 @@
-= simple_form_for [:admin, @product] do |f|
+= simple_nested_form_for [:admin, @product] do |f|
   = f.error_notification
-  .form-inputs
-    = f.input :name
-    = f.input :main
-    = f.input :category
-    = f.input :active
-    %br
-    .options
-      = f.simple_fields_for :options do |ff|
-        #option_fields
-          // = render partial: "nested_fields", locals: { ff: ff }
-          = ff.input :mass
-          = ff.input :volume
-          = ff.input :price
-          = ff.input :amount
-          = ff.input :packing
-          = link_to "Remove option", "#"
-    %br
-    %br
-    %br
-  .form-actions
-    = f.button :submit
-
-%br
-%hr
-= link_to "Add fields", "#"
+  = f.input :name
+  = f.input :main
+  = f.input :category
+  = f.input :active
+  %br
+  #options
+    = f.simple_fields_for :options do |option|
+      = render 'option_fields', f: option
+    .links
+      //= link_to_add_association 'add', f, :options, class: 'add'  
+      = f.link_to_add 'Add_option', :options, :data => {:target => '#options'}
+  = f.submit

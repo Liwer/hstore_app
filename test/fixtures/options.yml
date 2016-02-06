@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mass: 1
+  volume: 1
+  price: 1
+  amount: 1
+  packing: MyString
+
+two:
+  mass: 1
+  volume: 1
+  price: 1
+  amount: 1
+  packing: MyString

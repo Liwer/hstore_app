@@ -16,7 +16,7 @@ gem 'mongoid', '4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails' #git: 'https://github.com/rails/jquery-rails.git', tag: 'v2.3.0'
 # Turbolinks makes followin' links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '2.5.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -28,7 +28,8 @@ gem 'devise'
 gem 'rails_admin', '0.6.8'
 gem 'cancan', '1.6.10'
 gem 'warden', '1.2.3'
-
+gem 'cocoon', '1.2.6'
+gem 'nested_form', '0.3.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -29,4 +29,8 @@
 //= require sForm
 //= require superfish
 //= require touchTouch.jquery
+//= require turbolinks
+//= require cocoon
+//= require jquery_nested_form
+
 
