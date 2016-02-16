@@ -1,14 +1,13 @@
 = simple_nested_form_for [:admin, @product] do |f|
   = f.error_notification
   = f.input :name
-  = f.input :main
-  = f.input :category
-  = f.input :active
+  = f.input :category, collection: @cat
+  = f.input :active, as: :boolean, boolean_style: :inline
+  = f.input :main, as: :boolean, boolean_style: :inline
   %br
   #options
     = f.simple_fields_for :options do |option|
       = render 'option_fields', f: option
     .links
-      //= link_to_add_association 'add', f, :options, class: 'add'  
-      = f.link_to_add 'Add_option', :options, :data => {:target => '#options'}
+    = f.link_to_add 'Add_option', :options, :data => {:target => '#options'}
   = f.submit

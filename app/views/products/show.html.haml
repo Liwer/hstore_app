@@ -1,18 +1,30 @@
-= @product.try(:name)
-%br
-- @product.options.each_with_index do |o, i|
-  %strong
-    = "Option ##{i}"
-  %br
-  = o[:price]
-  = o[:mass]
-  = o[:packing]
-  %br
-  = simple_form_for :order, { url: '/add_to_cart' } do |f|
-    = f.input :count, as: :integer, input_html: { value: 1 }
-    = f.input :product_id, as: :hidden, input_html: { value: @product.id }
-    = f.input :option_id, as: :hidden, input_html: { value: i }
-    = f.submit
-  %br
-  %br
+.container_12
+  .grid_12
+    .wrapper
+      %h4= @product.try(:name)
+      %br
+        %img.img2.no_resize{:alt => "", :src => "/assets/page1_pic3.jpg"}/
+      %br 
+      - @product.options.each_with_index do |o, i|
+        %strong
+        %h3= "Варіант замовлення ##{i + 1}"
+        %br
+        Ціна:
+        = o[:price]
+        грн
+        %br
+        Масса:
+        = o[:mass]
+        кг
+        %br
+        Упаковка:
+        = o[:packing]
+        %br
+        = simple_form_for :order, { url: '/add_to_cart' } do |f|
+          = f.input "Кількість", as: :integer, input_html: { value: 1 }
+          = f.input :product_id, as: :hidden, input_html: { value: @product.id }
+          = f.input :option_id, as: :hidden, input_html: { value: i }
+          = f.submit "Замовити"
+        %br
+        %br
 

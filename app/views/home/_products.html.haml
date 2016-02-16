@@ -22,8 +22,10 @@
                     %span.price_sign
                       = price(product)
                   %h3
-                    = link_to product.name, "#"
-                  %p Nam liber teor cum soluta nob is
+                    = link_to product.name, show_path(product)
+                    %br
+                    %h1= product.category
+
             - else
               .wrapper.marTop1
                 = link_to show_path(product), class: 'img_project' do
@@ -32,5 +34,6 @@
                     = price(product)
                 %h3
                   %a
-                    = link_to product.name, "#"
-                %p Xam li tempor cum soluta nob is
+                    = link_to product.name, show_path(product)
+                    %br
+                    %h1= product.category

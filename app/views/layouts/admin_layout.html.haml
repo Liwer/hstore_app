@@ -4,12 +4,18 @@
     %title Бджолина хата
     = stylesheet_link_tag    'admin/admin_css', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'admin/admin_js', 'data-turbolinks-track' => true   
-    //= javascript_include_tag :cocoon
-    //= javascript_include_tag :defaults, 'nested_form'
-    
     = csrf_meta_tags
+   
   %body
     - flash.each do |name, msg|
-      = content_tag :div, msg.html_safe#, id: "flash_#{name}", class: "alert alert-#{name}"
-
-    = yield
+      = content_tag :div, msg.html_safe, id: "flash_#{name}", class: "alert alert-#{name}"
+    .container
+      .btn-group.btn-group-justified{"aria--label" => "...", :role => "group"}
+        .btn-group{:role => "group"}
+          = link_to 'Продукти',  admin_products_path, class: 'btn btn-default', type: "button"
+        .btn-group{:role => "group"}
+          = link_to 'Замовлення',  admin_orders_path, class: 'btn btn-default', type: "button"
+        .btn-group{:role => "group"}
+          %button.btn.btn-default{:type => "button"} Right
+%div.container
+  = yield

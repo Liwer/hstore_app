@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
     @order = Order.new
     if session[:cart].nil?
       redirect_to root_path
-      flash[:notice] = "Cart is empty"
+      flash[:notice] = "Кошик пустий"
     else
       ids = session[:cart].map{ |p| p[:product_id]}
       session[:cart].sort_by! { |k| k[:product_id] }
@@ -26,8 +26,9 @@ class OrdersController < ApplicationController
         result[:options] = []
         product_price = []
         current_product = cart.find { |p| p[:product_id] == product.id.to_s }
-        current_product[:options].each_with_index do |o, i|
-            options = JSON.parse(product.options[i].to_json).merge("count" => "#{o[:count]}")
+        current_product[:options].each_with_index do |o, ii|
+          count = current_product[:options].count 
+          options = JSON.parse(product.options[ii].to_json).merge(:count => count)
           cart.each do |s|
             s[:options].each do |oo|
               s[:name] = result[:name]
@@ -38,10 +39,11 @@ class OrdersController < ApplicationController
             oo[:amount] = options['amount']
            end
           end
-            product_price << (options['price'].to_i * options['count'].to_i) 
+            product_price << (options['price'].to_i * options[:count].to_i) 
           result[:options] << options
         end
         result['price'] = (product_price.inject{|sum,x| sum + x})
+
         @cart << result
         #session[:cart] << @cart
       end

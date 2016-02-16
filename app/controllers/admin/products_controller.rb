@@ -8,31 +8,34 @@ class Admin::ProductsController < ApplicationController
   # GET /admin/products.json
   def index
     @products = Product.all
-  end
+     end
 
   # GET /admin/products/1
   # GET /admin/products/1.json
   def show
-    # abort params[:id].inspect
-    # @product = Product.find(params[:id])
   end
 
   # GET /admin/products/new
   def new
     @product = Product.new
     @product.options.build
+    @cat = ["Мед різних сортів", "Настійки та екстракти", "Бджолопродукти", "Медові суміші та мазі", "Інвентар та обладнання"]
   end
 
   # GET /admin/products/1/edit
   def edit
+    @product = Product.find(params[:id])  
+    @cat = ["Мед різних сортів", "Настійки та екстракти", "Бджолопродукти", "Медові суміші та мазі", "Інвентар та обладнання"]
+  @product.options.clear
+@product.options.build
   end
 
   # POST /admin/products
   # POST /admin/products.json
   def create
     @product = Product.new(product_params)
-    @options = @product.options.build
-    
+    #abort params[:product].inspect
+      
     respond_to do |format|
       if @product.save
         format.html { redirect_to [:admin, @product], notice: 'Product was successfully created.' }
@@ -46,7 +49,13 @@ class Admin::ProductsController < ApplicationController
   # PATCH/PUT /admin/products/1
   # PATCH/PUT /admin/products/1.json
   def update
-    respond_to do |format|
+    
+   # if  params[:product][:options_attributes][:price] == ""
+    #  flash[:notice] = "Введіть параметри продукта!"
+     # redirect_to :back
+    #else
+      respond_to do |format|
+
       if @product.update(product_params)
         format.html { redirect_to [:admin, @product], notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
@@ -54,6 +63,7 @@ class Admin::ProductsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
+     # end
     end
   end
 
@@ -75,7 +85,7 @@ class Admin::ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:name, :active, :main, :category, :options_attributes => [:id, :mass, :volume, :price, :amount, :packing, :done, :_destroy])
+    params.require(:product).permit(:name, :active, :main, :category, :options_attributes => [:id, :mass, :volume, :price, :amount, :packing])
 
   end
 end

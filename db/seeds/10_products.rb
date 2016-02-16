@@ -8,30 +8,30 @@ Product.create(name: "Мед натуральний, квітковий, ліс�
                main: false,
                options:[{
   price: "30",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло або пластик"}, 
+  volume: '0.5',
+  mass: "700",
+  packing: "скло або пластик"}, 
   {
   price: "60",
-  volume: "1 л",
-  mass: "1400 г",
-  packing: "Скло або пластик"}
+  volume: "1",
+  mass: "1400",
+  packing: "скло або пластик"}
 ])
 
-Product.create(name: "Мед натуральний, акацієвий, липовий, гречаний",
+Product.create(name: "Мед натуральний, акацієвий, липовий,  гречаний",
                category: 'Мед різних сортів',
                active: true,
                main: false,
                options:[{
   price: "40",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло або пластик"},
+  volume: "0.5",
+  mass: "700",
+  packing: "скло або пластик"},
   {
   price: "80",
-  volume: "1 л",
-  mass: "1400 г",
-  packing: "Скло або пластик"}
+  volume: "1",
+  mass: "1400",
+  packing: "скло або пластик"}
 ])
 
 Product.create(name: "Мед натуральний, рапсовий, соняшниковий",
@@ -40,14 +40,14 @@ Product.create(name: "Мед натуральний, рапсовий, соня�
                main: false,
                options:[{
   price: "30",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло або пластик"},
+  volume: "0.5",
+  mass: "700",
+  packing: "скло або пластик"},
   {
   price: "60",
-  volume: "1 л",
-  mass: "1400 г",
-  packing: "Скло або пластик"}
+  volume: "1",
+  mass: "1400",
+  packing: "скло або пластик"}
 ])
 
 Product.create(name: "Мед щільниковий",
@@ -56,7 +56,7 @@ Product.create(name: "Мед щільниковий",
                main: false,
                options:[{
   price: "8.00",
-  mass: "100 г",
+  mass: "100",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -66,7 +66,7 @@ Product.create(name: "Мед щільниковий в дерев'яній ра�
                main: false,
                options:[{
   price: "70",
-  mass: "1.3 кг"}
+  mass: "1.3"}
 ])
 
 Product.create(name: "Забрус",
@@ -75,9 +75,9 @@ Product.create(name: "Забрус",
                main: false,
                options:[{
   price: "30",
-  volume: "0.5 л",
-  mass: "500 г",
-  packing: "Скло або пластик"}
+  volume: "0.5 ",
+  mass: "500  ",
+  packing: "скло або пластик"}
 ])
 
 Product.create(name: "Пилок квітковий",
@@ -86,11 +86,11 @@ Product.create(name: "Пилок квітковий",
                main: false,
                options:[{
   price: "15",
-  mass: "100 г",
+  mass: "100  ",
   packing: "Поліетиленова упаковка"},
   {
   price: "120",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -100,11 +100,11 @@ Product.create(name: "Перга очищена",
                main: false,
                options:[{
   price: "100",
-  mass: "100 г",
+  mass: "100  ",
   packing: "Поліетиленова упаковка"},
   {
   price: "800",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -114,15 +114,15 @@ Product.create(name: "Віск забрусовий",
                main: false,
                options:[{
   price: "8",
-  mass: "50 г",
+  mass: "50  ",
   packing: "Поліетилекова упаковка"},
   {
   price: "15",
-  mass: "100 г",
+  mass: "100  ",
   packing: "Поліетиленова упаковка"},
   {
   price: "120",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -132,11 +132,11 @@ Product.create(name: "Прополіс",
                main: false,
                options:[{
   price: "10",
-  mass: "10 г",
+  mass: "10  ",
   packing: "Поліетиленова упаковка"},
   {
   price: "800",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -146,16 +146,16 @@ Product.create(name: "Підмор бджолинний",
                main: false,
                options:[{
   price: "50",
-  volume: "0.5 л",
-  mass: "50 г",
-  packing: "Скло або поліетиленова упаковка"},
+  volume: "0.5 ",
+  mass: "50  ",
+  packing: "скло або поліетиленова упаковка"},
   {
   price: "80",
-  mass: "100 г", 
+  mass: "100  ", 
   packing: "Поліетиленова упаковка"},
   {
   price: "500",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
@@ -165,12 +165,12 @@ Product.create(name: "Настойка прополіса 10%",
                main: false,
                options:[{
   price: "30",
-  volume: "50 мл",
-  packing: "Скло"},
+  volume: "50 ",
+  packing: "скло"},
   {
   price: "60",
-  volume: "100 мл",
-  packing: "Скло"},
+  volume: "100 ",
+  packing: "скло"},
 ])
 
 Product.create(name: "Екстракт воскової молі 20%",
@@ -179,12 +179,12 @@ Product.create(name: "Екстракт воскової молі 20%",
                main: false,
                options:[{
   price: "50",
-  volume: "50 мл",
-  packing: "Скло"},
+  volume: "50 ",
+  packing: "скло"},
   {
   price: "100",
-  volume: "100 мл",
-  packing: "Скло"}
+  volume: "100 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Екстракт прополіса 30%",
@@ -193,22 +193,22 @@ Product.create(name: "Екстракт прополіса 30%",
                main: false,
                options:[{
   price: "50",
-  mass: "50 мл",
-  packing: "Скло"}
+  mass: "50 ",
+  packing: "скло"}
 ])
 
-Product.create(name: "Настойка бджолиного подмору",
+Product.create(name: "Настойка бджолино о подмору",
                category: 'Настійки та екстракти',
                active: true,
                main: false,
                options:[{
   price: "30",
-  mass: "50 мл",
-  packing: "Скло"},
+  mass: "50 ",
+  packing: "скло"},
   {
   price: "60",
-  mass: "100 мл",
-  packing: "Скло"}
+  mass: "100 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Екстракт трутневих личинок",
@@ -217,12 +217,12 @@ Product.create(name: "Екстракт трутневих личинок",
                main: false,
                options:[{
   price: "30",
-  volume: "50 мл",
-  packing: "Скло"},
+  volume: "50 ",
+  packing: "скло"},
   {
   price: "60",
-  volume: "100 мл",
-  packing: "Скло"}
+  volume: "100 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Маточне молочко, нативне",
@@ -231,18 +231,18 @@ Product.create(name: "Маточне молочко, нативне",
                main: false,
                options:[{
   price: "300",
-  mass: "15 г",
-  packing: "Скло"}
+  mass: "15  ",
+  packing: "скло"}
 ])
 
-Product.create(name: "Маточне молочко 15г, з медом 700г",
+Product.create(name: "Маточне молочко 15 , з медом 700 ",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "350",
-  mass: "750 г",
-  packing: "Скло"}
+  mass: "750  ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Маточники консервовані в медові",
@@ -261,22 +261,22 @@ Product.create(name: "Трутневе молочко",
                main: false,
                options:[{
   price: "50",
-  mass: "100 г",
+  mass: "100  ",
   packing: "Поліетиленова упаковка"},
   {
   price: "400",
-  mass: "1000 г",
+  mass: "1000  ",
   packing: "Поліетиленова упаковка"}
 ])
 
-Product.create(name: "Трутневе молочко(100г) з медом(600г)",
+Product.create(name: "Трутневе молочко(100 ) з медом(600 )",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "100",
-  mass: "700 г",
-  packing: "Скло"}
+  mass: "700  ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Чудо-мазь на основі воску",
@@ -285,12 +285,12 @@ Product.create(name: "Чудо-мазь на основі воску",
                main: false,
                options:[{
   price: "15",
-  volume: "30 мл",
-  packing: "Скло"},
+  volume: "30 ",
+  packing: "скло"},
   {
   price: "40",
-  volume: "100 мл",
-  packing: "Скло"}
+  volume: "100 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Чудо мазь прополісна 10%",
@@ -299,12 +299,12 @@ Product.create(name: "Чудо мазь прополісна 10%",
                main: false,
                options:[{
   price: "15",
-  volume: "30 мл",
-  packing: "Скло"},
+  volume: "30 ",
+  packing: "скло"},
   {
   price: "40",
-  volume: "100 мл",
-  packing: "Скло"}
+  volume: "100 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Чудо мазь прополісна 30%",
@@ -313,8 +313,8 @@ Product.create(name: "Чудо мазь прополісна 30%",
                main: false,
                options:[{
   price: "20",
-  volume: "15 мл",
-  packing: "Скло"}
+  volume: "15 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Мазь з возковою молю 10%",
@@ -323,8 +323,8 @@ Product.create(name: "Мазь з возковою молю 10%",
                main: false,
                options:[{
   price: "40",
-  volume: "30 мл",
-  packing: "Скло"}
+  volume: "30 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Мазь з подмором бджолиним 10%",
@@ -333,18 +333,18 @@ Product.create(name: "Мазь з подмором бджолиним 10%",
                main: false,
                options:[{
   price: "15",
-  volume: "30 мл",
-  packing: "Скло"}
+  volume: "30 ",
+  packing: "скло"}
 ])
 
-Product.create(name: "Крем для лиця з маточним молочком",
+Product.create(name: "Крем для лиця з маточним молочко",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "30",
-  volume: "30 мл",
-  packing: "Скло"}
+  volume: "30 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Крем для рук",
@@ -353,8 +353,8 @@ Product.create(name: "Крем для рук",
                main: false,
                options:[{
   price: "15",
-  volume: "30 мл",
-  packing: "Скло"}
+  volume: "30 ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Крем для масажу",
@@ -363,8 +363,8 @@ Product.create(name: "Крем для масажу",
                main: false,
                options:[{
   price: "40",
-  volume: "100 мл",
-  packing: "Скло"}
+  volume: "100 ",
+  packing: "скло"}
 ])
 
 
@@ -374,41 +374,41 @@ Product.create(name: "Медовуха",
                main: false,
                options:[{
   price: "40",
-  volume: "0.5 мл",
-  mass: "500 г",
-  packing: "Скло"},
+  volume: "0.5 ",
+  mass: "500  ",
+  packing: "скло"},
   {
   price: "80",
-  volume: "1 мл",
-  mass: "100 г",
-  packing: "Скло або пластик"}
+  volume: "1 ",
+  mass: "100  ",
+  packing: "скло або пластик"}
 ])
 
-Product.create(name: "Бальзам",
+Product.create(name: "Бальза",
                category: 'Настійки та екстракти',
                active: true,
                main: false,
                options:[{
   price: "80",
-  volume: "0.5 мл",
-  mass: "500 г",
-  packing: "Скло"},
+  volume: "0.5 ",
+  mass: "500  ",
+  packing: "скло"},
   {
   price: "150",
-  volume: "1 мл",
-  mass: "1000 г",
-  packing: "Скло або пластик"}
+  volume: "1 ",
+  mass: "1000  ",
+  packing: "скло або пластик"}
 ])
 
-Product.create(name: "Мед з пилком",
+Product.create(name: "Мед з пилко",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "45",
-  volume: "0.5 л",
-  mass: "650 г",
-  packing: "Скло"}
+  volume: "0.5 ",
+  mass: "650  ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Мед з прополісом 10%",
@@ -417,54 +417,54 @@ Product.create(name: "Мед з прополісом 10%",
                main: false,
                options:[{
   price: "100",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло"}
+  volume: "0.5 ",
+  mass: "700  ",
+  packing: "скло"}
 ])
 
-Product.create(name: "Мед з маточним молочком та гомогенатом трутневих личинок",
+Product.create(name: "Мед з маточним молочком та  омо енатом трутневих личинок",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "100",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло"}
+  volume: "0.5 ",
+  mass: "700  ",
+  packing: "скло"}
 ])
 
 
-Product.create(name: "Мед з пилком, пергою, прополісом",
+Product.create(name: "Мед з пилком, пергою, прополісо",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "100",
-  volume: "0.5 л",
-  mass: "700 г",
-  packing: "Скло"}
+  volume: "0.5 ",
+  mass: "700  ",
+  packing: "скло"}
 ])
 
-Product.create(name: "Мед з горіхами і сухофруктами",
-               category: 'Медові суміші та мазі',
-               active: true,
-               main: false,
-               options:[{
-  prise: "60",
-  volume: "0.5 л",
-  mass: "600 г",
-  packing: "Скло"}
-])
-
-Product.create(name: "Мед з горіхами",
+Product.create(name: "Мед з  оріхами і сухофруктами",
                category: 'Медові суміші та мазі',
                active: true,
                main: false,
                options:[{
   price: "60",
-  volume: "0.5 л",
-  mass: "650 г",
-  packing: "Скло"}
+  volume: "0.5 ",
+  mass: "600  ",
+  packing: "скло"}
+])
+
+Product.create(name: "Мед з  оріхами",
+               category: 'Медові суміші та мазі',
+               active: true,
+               main: false,
+               options:[{
+  price: "60",
+  volume: "0.5 ",
+  mass: "650  ",
+  packing: "скло"}
 ])
 
 Product.create(name: "Вулик лежак на 24 рамки",

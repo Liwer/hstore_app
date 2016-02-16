@@ -9,16 +9,16 @@
             - 'alpha'
           - else 
             - 'omega'
-      - @products.each_with_index do |products, i|
+      - @products.each_with_index do |product, i|
         .grid_2{class: "#{div_class.call(i)}"}
           .wrapp.maxheight{:style => "height: 247px;"}
             .box_inner
-              = link_to show_path(products), class: 'img_project' do
+              = link_to show_path(product), class: 'img_project' do
                 %img{:alt => "", :src => "/assets/page1_pic1.jpg"}/
                 %span.price_sign
-                  = price(products)
+                  = price(product)
                   %h5
-                  = link_to products.name, show_path(products)            
+                  = link_to product.name, show_path(product)            
                   %br
-                  = products.category
+                  = product.category
 

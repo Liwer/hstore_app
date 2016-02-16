@@ -20,7 +20,7 @@
                 = f.input :city, placeholder: 'Місто*:', label: false
             .grid_4.omega
               %label.desciption
-                = f.input :description, as: :text, placeholder: 'Адреса та коментарі:', label: false
+                = f.input :description, as: :text, placeholder: 'Область, місто, відділ "Нової почти" та коментарі:', label: false
             .clear
             %table.table-1
               %tbody
@@ -43,7 +43,7 @@
                         .row
                           .span4
                             = "Об'єм: #{o['volume']}" if o['volume']
-                            = "(нетто: #{o['mass']})," if o['mass']
+                            = "(Маса: #{o['mass']})," if o['mass']
                             = "Кількість: #{o['amount']})," if o['amount']
                             = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
                           .span1

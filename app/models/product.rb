@@ -6,5 +6,5 @@ class Product
   field :category, type: String
   embeds_many :options
   #validates_associated :options
-  accepts_nested_attributes_for :options, autosave: true, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :options, autosave: true, reject_if: :all_blank
 end

@@ -3,7 +3,7 @@
     .wrapper
       %h2
         %img.img2.no_resize{:alt => "", :src => "/assets/cell_sign.png"}/
-        = @category.name
+        = @category.try(:name)
         - div_class = Proc.new do |i|
           - if i == 0
             - 'alpha'

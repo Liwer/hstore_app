@@ -11,6 +11,9 @@
     - @products.each do |product|
       %tr
         = link_to product.name, admin_product_path(product)
+        %br
+        %br
+        = link_to 'destroy', admin_product_path(product), :method => :delete
       %br
         // %td= link_to 'Show', admin_product
         // %td= link_to 'Edit', edit_admin_product_path(product)

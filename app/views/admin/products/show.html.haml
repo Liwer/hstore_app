@@ -1,25 +1,35 @@
 %p#notice= notice
-= @product.name
-- @product[:options].each_with_index do |p, i|
+%h3= @product.name
+- if @product[:options].nil?
   %br
-  %br
-  = "Option ##{i}"
-  %br
-  Price:
-  = p[:price]
-  %br
-  Volume:
-  = p[:volume]
-  %br
-  Amount:
-  = p[:amount]
-  %br
-  Mass:
-  = p[:mass]
-  %br
-  Packing:
-  = p[:packing]
-%br
+  Додайте інформацію про продукт.
+- else
+  - @product[:options].each_with_index do |p, i|
+    %br
+    %br
+    %h5
+      = "Параметр ##{i + 1}"
+      %br
+      %br
+      %a Price:
+      = p[:price]
+      грн
+      %br
+      %a Volume:
+      = p[:volume]
+      л
+      %br
+      %a Amount:
+      = p[:amount]
+      шт
+      %br
+      %a Mass:
+      = p[:mass]
+      кг
+      %br
+      %a Packing:
+      = p[:packing]
+    %br
 
 = link_to 'Edit', edit_admin_product_path(@product)
 \|

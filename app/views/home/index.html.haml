@@ -70,22 +70,6 @@
         %h3
           %a{:href => "#"} Ut wisi enim adm
         %p.w180.marTop_10 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
-.box-1
-  .container_12
-    .grid_12
-      .grid_4.alpha
-        %p.title_subscr Newsletter
-      .grid_8.omega
-        %form#subscribe-form
-          .success{:style => "display: none;"} Your subscription request has been sent!
-          %fieldset
-            .grid_5.alpha
-              %label.email
-                %input{:onblur => "myBlur(this);", :onfocus => "myFocus(this);", :type => "email", :value => "E-mail"}/
-                %span.error *This is not a valid email address.
-            .grid_3.omega
-              .btns
-                %a.more_btn{"data-type" => "submit", :href => "#"} Subscribe
 
 = render 'products'
 

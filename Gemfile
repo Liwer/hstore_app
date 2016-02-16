@@ -30,6 +30,8 @@ gem 'cancan', '1.6.10'
 gem 'warden', '1.2.3'
 gem 'cocoon', '1.2.6'
 gem 'nested_form', '0.3.2'
+gem 'bootstrap-sass', '3.3.6'
+gem 'sprockets-rails', '2.2.4'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
