@@ -1,15 +1,28 @@
 %p#notice= notice
+%h4
+  %a Ім'я:
+  = @order.try(:name)
+  %br
+  %a Телефон:
+  = @order.try(:phone)
+  %br
+  %a Адреса:
+  = @order.try(:city)
+  %br
+  %a Відділ нової почти та коментарі:
+  = @order.try(:description)
+  %br
 - @order.product.each_with_index do |p, i|
   = p[:name]
   %br
   - p[:options].each_with_index do |o, ii|
-    = "Об'єм: #{o['volume']}" if o['volume']
-    = "(нетто: #{o['mass']})," if o['mass']
-    = "Кількість: #{o['amount']})," if o['amount']
-    = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
-    Count:
+    = "(Об'єм: #{o['volume']})," if o['volume']
+    = "(Масса: #{o['mass']})," if o['mass']
+    = "(Кількість (шт): #{o['amount']})," if o['amount']
+    = "(Упаковка: #{o['packing'].mb_chars.downcase})" if o['packing']
+    Кількість:
     = o['count']
-    Price:
+    Ціна:
     = o['price']
     %br
 %br

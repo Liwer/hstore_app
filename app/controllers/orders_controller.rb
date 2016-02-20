@@ -26,9 +26,8 @@ class OrdersController < ApplicationController
         result[:options] = []
         product_price = []
         current_product = cart.find { |p| p[:product_id] == product.id.to_s }
-        current_product[:options].each_with_index do |o, ii|
-          count = current_product[:options].count 
-          options = JSON.parse(product.options[ii].to_json).merge(:count => count)
+        current_product[:options].each_with_index do |o, ii| 
+          options = JSON.parse(product.options[ii].to_json).merge('count' => "#{o[:count]}")
           cart.each do |s|
             s[:options].each do |oo|
               s[:name] = result[:name]
@@ -39,13 +38,13 @@ class OrdersController < ApplicationController
             oo[:amount] = options['amount']
            end
           end
-            product_price << (options['price'].to_i * options[:count].to_i) 
+            product_price << (options['price'].to_i * options['count'].to_i) 
           result[:options] << options
         end
         result['price'] = (product_price.inject{|sum,x| sum + x})
-
+        
         @cart << result
-        #session[:cart] << @cart
+       
       end
     @cart_price = (@cart.map {|h| h['price'] }).inject {|sum,x| sum + x }
     end

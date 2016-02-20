@@ -20,7 +20,7 @@
                 = f.input :city, placeholder: 'Місто*:', label: false
             .grid_4.omega
               %label.desciption
-                = f.input :description, as: :text, placeholder: 'Область, місто, відділ "Нової почти" та коментарі:', label: false
+                = f.input :description, as: :text, placeholder:  'Bідділ "Нової почти" та коментарі:', label: false
             .clear
             %table.table-1
               %tbody
@@ -40,17 +40,19 @@
                         = p[:name]
                       %br
                       - p[:options].each_with_index do |o, ii|
-                        .row
-                          .span4
-                            = "Об'єм: #{o['volume']}" if o['volume']
-                            = "(Маса: #{o['mass']})," if o['mass']
-                            = "Кількість: #{o['amount']})," if o['amount']
-                            = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
-                          .span1
-                            %p.text-right
-                              = o['count']
-                            %td.col-ord-2
-                              = o['price']
+                        %tr
+                          %td.col-ord-1
+                            .row
+                              .span4
+                                = "Об'єм: #{o['volume']}," if o['volume']
+                                = "Маса: #{o['mass']}," if o['mass']
+                                = "Кількість: #{o['amount']}," if o['amount']
+                                = "Упаковка: #{o['packing'].mb_chars.downcase}" if o['packing']
+                              .span1
+                                %p.text-right
+                                  = o['count']
+                                %td.col-ord-2
+                                  = o['price']
                 %tr
                   %th.col-ord-1
                     Всього:

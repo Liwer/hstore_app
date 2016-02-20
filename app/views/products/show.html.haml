@@ -4,7 +4,6 @@
       %h4= @product.try(:name)
       %br
         %img.img2.no_resize{:alt => "", :src => "/assets/page1_pic3.jpg"}/
-      %br 
       - @product.options.each_with_index do |o, i|
         %strong
         %h3= "Варіант замовлення ##{i + 1}"
@@ -13,15 +12,12 @@
         = o[:price]
         грн
         %br
-        Масса:
-        = o[:mass]
-        кг
-        %br
-        Упаковка:
-        = o[:packing]
-        %br
+          = "Об'єм: #{o['volume']}," if o['volume']
+          = "Маса: #{o['mass']}," if o['mass']
+          = "Кількість: #{o['amount']}," if o['amount']
+          = "Упаковка: #{o['packing']}" if o['packing']
         = simple_form_for :order, { url: '/add_to_cart' } do |f|
-          = f.input "Кількість", as: :integer, input_html: { value: 1 }
+          = f.input 'count',  as: :integer, input_html: { value: 1 }
           = f.input :product_id, as: :hidden, input_html: { value: @product.id }
           = f.input :option_id, as: :hidden, input_html: { value: i }
           = f.submit "Замовити"

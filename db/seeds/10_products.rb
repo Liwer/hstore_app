@@ -8,7 +8,7 @@ Product.create(name: "Мед натуральний, квітковий, ліс�
                main: false,
                options:[{
   price: "30",
-  volume: '0.5',
+  volume: "0.5",
   mass: "700",
   packing: "скло або пластик"}, 
   {
