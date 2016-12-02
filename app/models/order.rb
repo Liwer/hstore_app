@@ -6,5 +6,5 @@ class Order
   field :description, type: String
   field :product, type: Array
   field :posted_by_order, type: Boolean, default: false
-validates_presence_of :name
+validates_presence_of :name, :phone, :city, :description
 end

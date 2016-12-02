@@ -3,9 +3,14 @@ class OrdersController < ApplicationController
   def create
     @orders = Order.new(order_params)
     @orders.product = session[:cart]
+    if @orders.valid?
     @orders.save
     session.delete(:cart)
     redirect_to root_path
+    else 
+      redirect_to :back
+      flash[:alert] = "Введіть всі данні"
+  end
   end
 
   def cart
@@ -98,6 +103,5 @@ class OrdersController < ApplicationController
   private
  def order_params
   params.require(:order).permit(:name, :phone, :city, :description)
-  #abort params[:order][:name].inspect
- end
+   end
 end
