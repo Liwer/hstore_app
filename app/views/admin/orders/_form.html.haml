@@ -1,11 +1,12 @@
 = simple_form_for [:admin, @order] do |f|
   = f.error_notification
-
+  //- abort @order.inspect
   .form-inputs
     = f.input :name
     = f.input :phone
     = f.input :city
     = f.input :description
+    = f.input :posted_by_orders
 
   .form-actions
     = f.button :submit

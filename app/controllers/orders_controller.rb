@@ -98,5 +98,6 @@ class OrdersController < ApplicationController
   private
  def order_params
   params.require(:order).permit(:name, :phone, :city, :description)
+  #abort params[:order][:name].inspect
  end
 end

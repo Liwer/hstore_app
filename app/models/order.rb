@@ -5,4 +5,6 @@ class Order
   field :city, type: String
   field :description, type: String
   field :product, type: Array
+  field :posted_by_order, type: Boolean, default: false
+validates_presence_of :name
 end

@@ -1,23 +1,15 @@
-%h1 Listing orders
-
-%table.table-striped
-  %thead
-    %tr
-      %th Ім'я замовника
-      %th Телефон
-      %th Адреса
-      %th Відділ нової почти та коментарі
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @orders.each do |order|
+%h1 Список замовлень
+.container
+  %table.table-striped
+    %thead
       %tr
-        %td= order.name
-        %td= order.phone
-        %td= order.city
-        %td= order.description
-        %td= link_to 'show', admin_order_path(order)
-        %td= link_to 'Destroy', admin_order_path(order), :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+        %th Ім'я замовника
+      
+    %tbody
+      - @orders.each do |order|
+        - if order.posted_by_order == false
+          %tr
+            %td= order.name
+            %td= link_to 'Детальніше', admin_order_path(order)
+            
+            %td= link_to 'Видалити замовлення', admin_order_path(order), :method => :delete, :data => { :confirm => 'Ви впевнені?' }

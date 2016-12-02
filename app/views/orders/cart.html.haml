@@ -13,7 +13,7 @@
           .wrapper
             .grid_4.alpha
               %label.name
-                = f.input :name, placeholder: 'ПІБ*:', label: false
+                = f.input :name, placeholder: 'ПІБ*:', label: false, required: false
               %label.phone
                 = f.input :phone, placeholder: 'Телефон*:', label: false
               %label.city
@@ -63,7 +63,7 @@
           .form_btns
             = link_to "Очистити кошик", clear_cart_path, class: 'more_btn2'
             %button{type: 'button', class: 'more_btn2', id: 'submit-button'}
-              Відправити
+              Замовити
 
       .grid_4.omega
         %h2 Доставка

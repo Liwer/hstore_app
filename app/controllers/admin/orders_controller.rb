@@ -11,47 +11,31 @@ class Admin::OrdersController < ApplicationController
   # GET /admin/orders/1
   # GET /admin/orders/1.json
   def show
-  @order = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
-  # GET /admin/orders/new
-  def new
-    @order = Order.new
+  def mark_as_send
+    @order = Order.find(params[:id])
+    @order.posted_by_order = true
+    redirect_to :back
   end
+ 
+   def update
+    
+@order.posted_by_order = true
+      respond_to do |format|
 
-  # GET /admin/orders/1/edit
-  def edit
-  end
-
-  # POST /admin/orders
-  # POST /admin/orders.json
-  def create
-    @order = Order.new(order_params)
-
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to [:admin, @order], notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /admin/orders/1
-  # PATCH/PUT /admin/orders/1.json
-  def update
-    respond_to do |format|
-      if @order.update(order_params)
-        format.html { redirect_to [:admin, @order], notice: 'Order was successfully updated.' }
-        format.json { render :show, status: :ok, location: @order }
+      if @product.update(product_params)
+        format.html { redirect_to [:admin, @product], notice: 'Product was successfully updated.' }
+        format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
+     # end
     end
   end
+
 
   # DELETE /admin/orders/1
   # DELETE /admin/orders/1.json
@@ -67,10 +51,5 @@ class Admin::OrdersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:name, :phone, :city, :description)
     end
 end
