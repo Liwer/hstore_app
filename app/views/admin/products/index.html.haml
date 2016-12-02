@@ -1,4 +1,7 @@
-%h1 Listing products
+%br
+%a= link_to 'Додати продукт', new_admin_product_path
+%br
+%h1 Список продукції
 
 %table
   %thead
@@ -10,15 +13,9 @@
   %tbody
     - @products.each do |product|
       %tr
-        = link_to product.name, admin_product_path(product)
+        %h4= link_to product.name, admin_product_path(product)
         %br
         %br
-        = link_to 'destroy', admin_product_path(product), :method => :delete
+        = link_to 'видалити', admin_product_path(product), :method => :delete
+        %hr
       %br
-        // %td= link_to 'Show', admin_product
-        // %td= link_to 'Edit', edit_admin_product_path(product)
-        // %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Product', new_admin_product_path
