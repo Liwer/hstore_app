@@ -2,6 +2,18 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    @order.product = session[:cart]
+    if @order.valid?
+    @order.save
+    session.delete(:cart)
+    redirect_to root_path
+    else 
+      redirect_to :back
+      flash[:alert] = "Введіть всі данні"
+  end
+  end
+
+  def cart
     if session[:cart].nil?
       redirect_to root_path
       flash[:notice] = "Кошик пустий"
@@ -45,16 +57,7 @@ class OrdersController < ApplicationController
       end
     @cart_price = (@cart.map {|h| h['price'] }).inject {|sum,x| sum + x }
     end
-    @order.product = @cart
-    if @order.valid?
-    @order.save
-    session.delete(:cart)
-    redirect_to root_path
-    else 
-      redirect_to :back
-      flash[:alert] = "Введіть всі данні"
-  end
-
+    session[:cart] = @cart
   end
 
   def remove_product
