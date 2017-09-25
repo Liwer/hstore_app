@@ -7,6 +7,7 @@ class Admin::OrdersController < ApplicationController
   def index
     @orders = Order.all
   end
+  
 
   # GET /admin/orders/1
   # GET /admin/orders/1.json
@@ -15,14 +16,16 @@ class Admin::OrdersController < ApplicationController
   end
 
   def mark_as_send
+    abort "!"
     @order = Order.find(params[:id])
-    @order.posted_by_order = true
-    redirect_to :back
+    abort @order.inspect
+    #@order.posted_by_order = true
+    #redirect_to :back
   end
  
    def update
     
-@order.posted_by_order = true
+      #@order.posted_by_order = true
       respond_to do |format|
 
       if @product.update(product_params)
@@ -32,7 +35,6 @@ class Admin::OrdersController < ApplicationController
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
-     # end
     end
   end
 

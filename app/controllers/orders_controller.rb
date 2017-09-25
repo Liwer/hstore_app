@@ -18,6 +18,7 @@ class OrdersController < ApplicationController
       redirect_to root_path
       flash[:notice] = "Кошик пустий"
     else
+      abort session[:cart].inspect
       ids = session[:cart].map{ |p| p[:product_id]}
       session[:cart].sort_by! { |k| k[:product_id] }
       products = Product.find(ids)

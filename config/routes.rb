@@ -67,7 +67,7 @@ Rails.application.routes.draw do
     # (app/controllers/admin/products_controller.rb)
     # resources :dashboard
     resources :products 
-    resources :orders
-    post 'mark_as_send' => 'orders#mark_as_send', as: 'mark_as_send'
+    resources :orders 
+      patch 'mark_as_send' => 'orders#mark_as_send', as: 'mark_as_send'
   end
 end

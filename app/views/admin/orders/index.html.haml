@@ -10,6 +10,9 @@
         - if order.posted_by_order == false
           %tr
             %td= order.name
+            %td= render 'form'
             %td= link_to 'Детальніше', admin_order_path(order)
-            
             %td= link_to 'Видалити замовлення', admin_order_path(order), :method => :delete, :data => { :confirm => 'Ви впевнені?' }
+        - else
+          %tr
+            %td= order.name
